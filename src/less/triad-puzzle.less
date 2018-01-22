@@ -1,0 +1,72 @@
+@import "chriz-hand";
+
+@piece_size: 100px;
+
+body { background: #dedede; }
+
+.sheet {
+//	font-family: 'Chriz Hand', serif;
+	background:
+		linear-gradient(
+			0deg,
+			#000 0, #000 1px, transparent 0, transparent 8px,
+			#000 0, #000 9px, transparent 0, transparent 16px,
+			#000 0, #000 17px, transparent 0, transparent 24px,
+			#000 0, #000 25px, transparent 0, transparent 32px,
+			#000 0, #000 33px, transparent 0),
+		#f6f6f6;
+	background-size: 100% 95px;
+	background-position: center top;
+	border: 2em solid #f6f6f6;
+	
+	max-width: 40em;
+	min-height: 20em;
+	margin: auto;
+	padding: 2em 1em;
+	
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(auto-fill, 180px);
+	justify-items: center;
+	list-style: none; 
+	
+	.piece {
+		font-size: 22px;
+		letter-spacing: -0.1em;
+		display: inline-block;
+		background: #fefefe;
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		width: @piece_size;
+		height: @piece_size;
+		text-align: center;
+		line-height: @piece_size;
+
+		// The `--rotate` variable is set in the `style` attribute
+		--rotate: calc(var(--rotation, 0) * 1deg);
+		transform: rotate(var(--rotate));
+		
+		filter: drop-shadow(1px 3px 7px rgba(0, 0, 100, 0.25));
+	}
+	
+	data {
+		line-height: 1;
+	}
+	
+	.root {
+		font-size: 36px;
+		
+		&[value="A"] {
+			margin-right: -.2em;
+			
+			+ .acc { margin-right: -.2em; }
+		}
+	}
+	
+	.acc {
+		vertical-align: super;
+	}
+	
+	.triad {
+		font-size: 26px;
+	}
+}
