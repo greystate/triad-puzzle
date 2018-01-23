@@ -38,6 +38,45 @@ describe "Triad", ->
 			(expect @otherTriad.typeName()).toEqual 'm'
 			(expect @notherTriad.typeName()).toEqual 'dim'
 	
+	describe "validation", ->
+		it "fixes 'impossible flats'", ->
+			@triad = new Triad
+				pitch: 0
+				acc: -1
+			
+			(expect @triad.acc).toEqual 0
+	
+		it "fixes 'impossible sharps'", ->
+			@triad = new Triad
+				pitch: 4
+				acc: 1
+			
+			(expect @triad.acc).toEqual 0
+	
+		it "fixes 'impossible naturals'", ->
+			@triadBflat = new Triad
+				pitch: 10
+				acc: 0
+			
+			@triadFsharp = new Triad
+				pitch: 6
+				acc: 0
+			
+			(expect @triadBflat.acc).toEqual -1
+			(expect @triadFsharp.acc).toEqual 1
+		
+		it "fixes out of range root values", ->
+			@triadOver = new Triad
+				pitch: 11
+				acc: -1
+			
+			@triadUnder = new Triad
+				pitch: 0
+				acc: 1
+			
+			(expect @triadOver.baseName()).toEqual 'C'
+			(expect @triadUnder.baseName()).toEqual 'B'
+	
 
 	describe "@fromSymbol", ->
 		it "builds a minor Triad from its symbol", =>

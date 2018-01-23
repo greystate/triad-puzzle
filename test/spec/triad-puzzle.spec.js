@@ -42,6 +42,46 @@ describe("Triad", function () {
       return expect(_this.notherTriad.typeName()).toEqual('dim');
     });
   });
+  describe("validation", function () {
+    it("fixes 'impossible flats'", function () {
+      this.triad = new Triad({
+        pitch: 0,
+        acc: -1
+      });
+      return expect(this.triad.acc).toEqual(0);
+    });
+    it("fixes 'impossible sharps'", function () {
+      this.triad = new Triad({
+        pitch: 4,
+        acc: 1
+      });
+      return expect(this.triad.acc).toEqual(0);
+    });
+    it("fixes 'impossible naturals'", function () {
+      this.triadBflat = new Triad({
+        pitch: 10,
+        acc: 0
+      });
+      this.triadFsharp = new Triad({
+        pitch: 6,
+        acc: 0
+      });
+      expect(this.triadBflat.acc).toEqual(-1);
+      return expect(this.triadFsharp.acc).toEqual(1);
+    });
+    return it("fixes out of range root values", function () {
+      this.triadOver = new Triad({
+        pitch: 11,
+        acc: -1
+      });
+      this.triadUnder = new Triad({
+        pitch: 0,
+        acc: 1
+      });
+      expect(this.triadOver.baseName()).toEqual('C');
+      return expect(this.triadUnder.baseName()).toEqual('B');
+    });
+  });
   describe("@fromSymbol", function () {
     var _this2 = this;
 
