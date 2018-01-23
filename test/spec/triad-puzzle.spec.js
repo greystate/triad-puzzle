@@ -117,7 +117,7 @@ describe("Triad", function () {
       var html;
       this.triad = new Triad('F#+');
       html = this.triad.toHTML();
-      return expect(html).toEqual("<span class=\"piece\">\n	<data class=\"root\" value=\"F\">F</data>\n	<data class=\"acc\" value=\"#\">♯</data>\n	<data class=\"triad\" value=\"+\">+</data>\n</span>");
+      return expect(html).toEqual("<span class=\"piece\">\n	<data class=\"root\" value=\"F\">F</data>\n	<data class=\"acc\" value=\"#\">#</data>\n	<data class=\"triad\" value=\"+\">+</data>\n</span>");
     });
   });
 });

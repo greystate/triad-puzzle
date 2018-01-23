@@ -31,22 +31,41 @@ class Triad
 			@type ?= DEFAULTS.type
 		
 	rootName: () ->
-		base = ROOTS.charAt @pitch - @acc
-		"#{base}#{@accidentalSign()}"
+		"#{@baseName()}#{@accidentalSign()}"
 	
-	accidentalSign: () ->
-		switch @acc
-			when -1
-				'b'
-			when 1
-				'#'
-			else
-				''
+	baseName: () ->
+		ROOTS.charAt @pitch - @acc
+	
+	accidentalSign: (forHTML = false) ->
+		if not forHTML
+			switch @acc
+				when -1
+					'b'
+				when 1
+					'#'
+				else
+					''
 	
 	typeName: () -> TYPES[@type]
 	
 	toSymbol: () -> "#{@rootName()}#{@typeName()}"
 
+	toHTML: () ->
+		base = @baseName()
+		acc = @accidentalSign()
+		accEntity = @accidentalSign yes
+		type = @typeName()
+		
+		baseHTML = """<data class="root" value="#{base}">#{base}</data>"""
+		accHTML =  if acc isnt '' then """<data class="acc" value="#{acc}">#{acc}</data>""" else ''
+		typeHTML = if type isnt '' then """<data class="triad" value="#{type}">#{type}</data>""" else ''
+		parts = [baseHTML, accHTML, typeHTML].filter (val) => val isnt ''
+		
+		"""
+		<span class="piece">
+			#{parts.join '\n\t'}
+		</span>
+		"""
 	
 	@fromSymbol: (symbol) ->
 		symbolRE = ///
@@ -58,9 +77,9 @@ class Triad
 		///
 		if symbolRE.test symbol
 			[match, root, accidental, triadtype] = symbol.match symbolRE
-			acc = if accidental isnt '' then ('b #'.indexOf accidental) - 1 else 0
-			pitch = ('C D EF G A B'.indexOf root) + acc
-			type = if triadtype isnt undefined then ['', 'm', 'dim', '+'].indexOf triadtype else 0
+			acc = if accidental isnt '' then (ACCIDENTALS.indexOf accidental) - 1 else 0
+			pitch = (ROOTS.indexOf root) + acc
+			type = if triadtype isnt undefined then TYPES.indexOf triadtype else 0
 			new Triad { pitch, acc, type }
 
 window.Triad = Triad

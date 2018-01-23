@@ -116,7 +116,7 @@ describe "Triad", ->
 			(expect html).toEqual """
 				<span class="piece">
 					<data class="root" value="F">F</data>
-					<data class="acc" value="#">♯</data>
+					<data class="acc" value="#">#</data>
 					<data class="triad" value="+">+</data>
 				</span>
 			"""
