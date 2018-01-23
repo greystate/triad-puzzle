@@ -71,7 +71,6 @@ describe "Triad", ->
 			@triad = Triad.fromSymbol 'Pdiddy'
 			(expect @triad).toBeUndefined()
 
-
 	describe ".toSymbol()", ->
 		it "converts a C major triad", =>
 			@triad = new Triad
@@ -102,4 +101,23 @@ describe "Triad", ->
 				
 			(expect @triad.toSymbol()).toEqual 'Bdim'
 		
-
+	describe ".toHTML()", ->
+		it "renders a simple C triad", ->
+			@triad = new Triad
+			html = @triad.toHTML()
+			(expect html).toEqual """
+				<span class="piece">
+					<data class="root" value="C">C</data>
+				</span>
+			"""
+		it "also renders an F#+ triad", ->
+			@triad = new Triad 'F#+'
+			html = @triad.toHTML()
+			(expect html).toEqual """
+				<span class="piece">
+					<data class="root" value="F">F</data>
+					<data class="acc" value="#">♯</data>
+					<data class="triad" value="+">+</data>
+				</span>
+			"""
+			

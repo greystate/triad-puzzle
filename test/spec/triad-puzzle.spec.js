@@ -74,7 +74,7 @@ describe("Triad", function () {
       return expect(this.triad).toBeUndefined();
     });
   });
-  return describe(".toSymbol()", function () {
+  describe(".toSymbol()", function () {
     var _this3 = this;
 
     it("converts a C major triad", function () {
@@ -104,6 +104,20 @@ describe("Triad", function () {
         type: 2
       });
       return expect(this.triad.toSymbol()).toEqual('Bdim');
+    });
+  });
+  return describe(".toHTML()", function () {
+    it("renders a simple C triad", function () {
+      var html;
+      this.triad = new Triad();
+      html = this.triad.toHTML();
+      return expect(html).toEqual("<span class=\"piece\">\n	<data class=\"root\" value=\"C\">C</data>\n</span>");
+    });
+    return it("also renders an F#+ triad", function () {
+      var html;
+      this.triad = new Triad('F#+');
+      html = this.triad.toHTML();
+      return expect(html).toEqual("<span class=\"piece\">\n	<data class=\"root\" value=\"F\">F</data>\n	<data class=\"acc\" value=\"#\">♯</data>\n	<data class=\"triad\" value=\"+\">+</data>\n</span>");
     });
   });
 });
