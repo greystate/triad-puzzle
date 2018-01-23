@@ -43,8 +43,33 @@ describe "Triad", ->
 
 
 	describe ".toSymbol()", ->
-		it "defaults to a C major triad", =>
+		it "converts a C major triad", =>
 			@triad = new Triad
 
 			(expect @triad.toSymbol()).toEqual 'C'
+		
+		it "converts a Db minor triad", ->
+			@triad = new Triad
+				pitch: 1
+				acc: -1
+				type: 1
+				
+			(expect @triad.toSymbol()).toEqual 'Dbm'
+		
+		it "converts an F#+ triad", ->
+			@triad = new Triad
+				pitch: 6
+				acc: 1
+				type: 3
+				
+			(expect @triad.toSymbol()).toEqual 'F#+'
+		
+		it "converts a Bdim triad", ->
+			@triad = new Triad
+				pitch: 11
+				acc: 0
+				type: 2
+				
+			(expect @triad.toSymbol()).toEqual 'Bdim'
+		
 

@@ -46,9 +46,33 @@ describe("Triad", function () {
   return describe(".toSymbol()", function () {
     var _this3 = this;
 
-    return it("defaults to a C major triad", function () {
+    it("converts a C major triad", function () {
       _this3.triad = new Triad();
       return expect(_this3.triad.toSymbol()).toEqual('C');
+    });
+    it("converts a Db minor triad", function () {
+      this.triad = new Triad({
+        pitch: 1,
+        acc: -1,
+        type: 1
+      });
+      return expect(this.triad.toSymbol()).toEqual('Dbm');
+    });
+    it("converts an F#+ triad", function () {
+      this.triad = new Triad({
+        pitch: 6,
+        acc: 1,
+        type: 3
+      });
+      return expect(this.triad.toSymbol()).toEqual('F#+');
+    });
+    return it("converts a Bdim triad", function () {
+      this.triad = new Triad({
+        pitch: 11,
+        acc: 0,
+        type: 2
+      });
+      return expect(this.triad.toSymbol()).toEqual('Bdim');
     });
   });
 });
