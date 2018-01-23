@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26148",
 "files": {
+	"\/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/.gitignore",
+		"oF": 0
+		},
 	"\/assets\/chriztian-steinmeier-hand-webfont.eot": {
 		"cB": 0,
 		"ft": 8192,
@@ -64,12 +71,34 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/src\/coffee\/helpers.coffee": {
+		"ft": 32,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/helpers.js",
+		"oF": 0,
+		"oS": 0,
+		"sC": 0,
+		"tS": 1
+		},
 	"\/src\/coffee\/triad-puzzle.coffee": {
 		"ft": 32,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/build\/assets\/triad-puzzle.js",
+		"oF": 0,
+		"oS": 0,
+		"sC": 0,
+		"tS": 1
+		},
+	"\/src\/coffee\/triad.coffee": {
+		"ft": 32,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/triad.js",
 		"oF": 0,
 		"oS": 0,
 		"sC": 0,
@@ -135,7 +164,7 @@
 		"mi": 0,
 		"oA": 0,
 		"oAP": "\/test\/spec\/triad-puzzle.spec.js",
-		"oF": 3,
+		"oF": 2,
 		"oS": 1,
 		"sC": 0,
 		"tS": 1
@@ -143,9 +172,9 @@
 	"\/test\/spec\/triad-puzzle.spec.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
-		"oAP": "\/build\/umbraco\/assets\/triad-puzzle.spec.min.js",
+		"oAP": "\/build\/assets\/triad-puzzle.spec.min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -176,7 +205,7 @@
 	"displayValue": "triad-puzzle",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-karate",
-	"lastBuiltDate": 538413824
+	"lastBuiltDate": 538439216
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1926,7 +1955,7 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 1,
 		"createSourceMap": 0,
-		"minifyOutput": 1,
+		"minifyOutput": 0,
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 0,
 		"transpilerStyle": 1
@@ -1979,12 +2008,12 @@
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.min.js",
-		"autoOutputPathRelativePath": "umbraco\/assets",
+		"autoOutputPathRelativePath": "assets",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 1,
 		"createSourceMap": 0,
-		"minifyOutput": 1,
+		"minifyOutput": 0,
 		"syntaxCheckerStyle": 0,
 		"transpilerStyle": 0
 		},
