@@ -15,6 +15,7 @@ DEFAULTS =
 	type:       0    # 0-3         (major, minor, diminished, augmented)
 
 ROOTS       = 'C D EF G A B'
+#              012345678901
 ACCIDENTALS = 'b #'
 TYPES       = ['', 'm', 'dim', '+']
 
@@ -30,11 +31,35 @@ class Triad
 			@acc ?= DEFAULTS.acc
 			@type ?= DEFAULTS.type
 		
+		@validate()
+	
+	validate: () ->
+		switch @acc
+			when -1
+				switch @pitch
+					when 0, 2, 5, 7, 9
+						# Can't be represented as a "flat"
+						@acc = 0
+			when 0
+				switch @pitch
+					when 1, 3, 6, 8
+						@acc = 1
+					when 10
+						@acc = -1
+			when 1
+				switch @pitch
+					when 2, 4, 7, 9, 11
+						# Can't be represented as a "sharp"
+						@acc = 0
+			
 	rootName: () ->
 		"#{@baseName()}#{@accidentalSign()}"
 	
 	baseName: () ->
-		ROOTS.charAt @pitch - @acc
+		index = @pitch - @acc
+		if index > 11 then index = 0
+		if index < 0 then index = 11
+		ROOTS.charAt index
 	
 	accidentalSign: (forHTML = false) ->
 		if not forHTML
@@ -83,3 +108,4 @@ class Triad
 			new Triad { pitch, acc, type }
 
 window.Triad = Triad
+
