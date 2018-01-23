@@ -11,8 +11,8 @@ TYPE =
 
 DEFAULTS =
 	pitch: 0		# 0-11
-	acc: 0			# -1, 0, 1		 (b, [nothing/natural], #)
-	type: 0			# 0-3					 (major, minor, diminished, augmented)
+	acc: 0			# -1, 0, 1    (b, [nothing/natural], #)
+	type: 0			# 0-3         (major, minor, diminished, augmented)
 
 class Triad
 	constructor: (options = { }) ->
@@ -26,12 +26,20 @@ class Triad
 	
 	
 	toSymbol: () ->
-		"C"
+		symbol = []
+		symbol.push 'C D EF G A B'.charAt @pitch - @acc
+		symbol.push switch @acc
+			when -1
+				'b'
+			when 1
+				'#'
+		symbol.push ['', 'm', 'dim', '+'][@type]
+		symbol.join ''
 	
 	@fromSymbol: (symbol) ->
 		symbolRE = ///
 			^
-			([CDEFGAB])    # root
+			([CDEFGAB])     # root
 			([b\#]?)        # optional accidental
 			(\+|m|dim)?     # optional triad type
 			$
