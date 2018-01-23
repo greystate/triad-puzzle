@@ -175,7 +175,8 @@
 	"creationDate": 526146568,
 	"displayValue": "triad-puzzle",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-karate"
+	"iconImageName": "meme-karate",
+	"lastBuiltDate": 538413824
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
