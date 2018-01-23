@@ -5,10 +5,41 @@ describe("Triad", function () {
     var _this = this;
 
     this.triad = new Triad();
-    return it("defaults to a C major triad", function () {
+    this.otherTriad = new Triad({
+      pitch: 3,
+      acc: 1,
+      type: 1
+    });
+    this.notherTriad = new Triad("Abdim");
+    it("defaults to a C major triad", function () {
       expect(_this.triad.pitch).toEqual(0);
       expect(_this.triad.acc).toEqual(0);
       return expect(_this.triad.type).toEqual(0);
+    });
+    it("can create a D#m triad as well", function () {
+      expect(_this.otherTriad.pitch).toEqual(3);
+      expect(_this.otherTriad.acc).toEqual(1);
+      return expect(_this.otherTriad.type).toEqual(1);
+    });
+    it("can create with a symbol too", function () {
+      expect(_this.notherTriad.pitch).toEqual(8);
+      expect(_this.notherTriad.acc).toEqual(-1);
+      return expect(_this.notherTriad.type).toEqual(2);
+    });
+    it("reports its root name", function () {
+      expect(_this.triad.rootName()).toEqual('C');
+      expect(_this.otherTriad.rootName()).toEqual('D#');
+      return expect(_this.notherTriad.rootName()).toEqual('Ab');
+    });
+    it("reports its accidental sign", function () {
+      expect(_this.triad.accidentalSign()).toEqual('');
+      expect(_this.otherTriad.accidentalSign()).toEqual('#');
+      return expect(_this.notherTriad.accidentalSign()).toEqual('b');
+    });
+    return it("reports its type name", function () {
+      expect(_this.triad.typeName()).toEqual('');
+      expect(_this.otherTriad.typeName()).toEqual('m');
+      return expect(_this.notherTriad.typeName()).toEqual('dim');
     });
   });
   describe("@fromSymbol", function () {

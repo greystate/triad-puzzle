@@ -1,40 +1,52 @@
 ACCIDENTAL =
-	flat: -1
-	natural: 0
-	sharp: 1
+	flat:      -1
+	natural:    0
+	sharp:      1
 
 TYPE =
-	major: 0
-	minor: 1
+	major:      0
+	minor:      1
 	diminished: 2
-	augmented: 3
+	augmented:  3
 
 DEFAULTS =
-	pitch: 0		# 0-11
-	acc: 0			# -1, 0, 1    (b, [nothing/natural], #)
-	type: 0			# 0-3         (major, minor, diminished, augmented)
+	pitch:      0    # 0-11
+	acc:        0    # -1, 0, 1    (b, [nothing/natural], #)
+	type:       0    # 0-3         (major, minor, diminished, augmented)
+
+ROOTS       = 'C D EF G A B'
+ACCIDENTALS = 'b #'
+TYPES       = ['', 'm', 'dim', '+']
+
 
 class Triad
 	constructor: (options = { }) ->
-		{ @pitch, @acc, @type } = options
+		if (typeof options) is 'string'
+			return Triad.fromSymbol options
+		else
+			{ @pitch, @acc, @type } = options
 		
-		@pitch ?= DEFAULTS.pitch
-		@acc ?= DEFAULTS.acc
-		@type ?= DEFAULTS.type
+			@pitch ?= DEFAULTS.pitch
+			@acc ?= DEFAULTS.acc
+			@type ?= DEFAULTS.type
 		
-		return Triad.fromSymbol options if typeof options is 'string'
+	rootName: () ->
+		base = ROOTS.charAt @pitch - @acc
+		"#{base}#{@accidentalSign()}"
 	
-	
-	toSymbol: () ->
-		symbol = []
-		symbol.push 'C D EF G A B'.charAt @pitch - @acc
-		symbol.push switch @acc
+	accidentalSign: () ->
+		switch @acc
 			when -1
 				'b'
 			when 1
 				'#'
-		symbol.push ['', 'm', 'dim', '+'][@type]
-		symbol.join ''
+			else
+				''
+	
+	typeName: () -> TYPES[@type]
+	
+	toSymbol: () -> "#{@rootName()}#{@typeName()}"
+
 	
 	@fromSymbol: (symbol) ->
 		symbolRE = ///
