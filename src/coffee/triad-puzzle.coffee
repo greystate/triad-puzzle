@@ -1,4 +1,5 @@
 SPACE_KEY = 32
+PIECES = 8
 
 class TriadPuzzle
 	constructor: (@sheetSelector = '.sheet') ->
@@ -16,7 +17,9 @@ class TriadPuzzle
 		previousTriad = null
 		count = 1
 		
-		while count <= 8
+		# We need 8 pieces, but we don't want to have
+		# two identical triads follow each other
+		while count <= PIECES
 			item = document.createElement 'li'
 			triad = @getRandomTriad()
 			if triad.toSymbol() isnt previousTriad
