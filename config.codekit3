@@ -71,6 +71,17 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/src\/coffee\/app.coffee": {
+		"ft": 32,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/build\/assets\/app.js",
+		"oF": 0,
+		"oS": 0,
+		"sC": 0,
+		"tS": 1
+		},
 	"\/src\/coffee\/helpers.coffee": {
 		"ft": 32,
 		"ma": 0,
@@ -86,7 +97,7 @@
 		"ft": 32,
 		"ma": 0,
 		"mi": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/build\/assets\/triad-puzzle.js",
 		"oF": 0,
 		"oS": 0,
