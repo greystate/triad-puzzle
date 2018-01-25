@@ -1,11 +1,38 @@
 @import "chriz-hand";
 
 @piece_size: 100px;
+@piece_color: #f5f4f0;
+@text_color: #36505e;
+@bg_color: #f0a846;
+@paper_color: #f6f6f6;
 
-body { background: #dedede; }
+body {
+	background: @bg_color;
+	color: @text_color;
+	font-family: American Typewriter;
+}
+
+h1 {
+	text-align: center;
+}
+
+main h2 {
+	text-align: right;
+	max-width: 50%;
+	margin: auto;
+	font-size: 1em;
+	font-family: Noteworthy;
+	opacity: 0.3;
+	position: relative;
+	
+	transform: translateY(280%) rotate(-2deg);
+	transform-origin: right bottom;
+}
 
 .sheet {
-//	font-family: 'Chriz Hand', serif;
+	//	font-family: 'Chriz Hand', serif;
+	font-family: Noteworthy, serif;
+	font-weight: bold;
 	background:
 		linear-gradient(
 			0deg,
@@ -14,10 +41,12 @@ body { background: #dedede; }
 			#000 0, #000 17px, transparent 0, transparent 24px,
 			#000 0, #000 25px, transparent 0, transparent 32px,
 			#000 0, #000 33px, transparent 0),
-		#f6f6f6;
+		@paper_color;
 	background-size: 100% 95px;
 	background-position: center top;
-	border: 2em solid #f6f6f6;
+	border: 2em solid @paper_color;
+	box-shadow: 4px 3px 8px 0 rgba(0, 0, 100, 0.3);
+	transform: rotate(-0.3deg);
 	
 	max-width: 40em;
 	min-height: 20em;
@@ -34,8 +63,8 @@ body { background: #dedede; }
 		font-size: 22px;
 		letter-spacing: -0.1em;
 		display: inline-block;
-		background: #fefefe;
-		border: 1px solid rgba(0, 0, 0, 0.3);
+		background: @piece_color;
+		border: 2px solid rgba(0, 0, 0, 0.8);
 		width: @piece_size;
 		height: @piece_size;
 		text-align: center;
@@ -53,21 +82,21 @@ body { background: #dedede; }
 	}
 	
 	.root {
-		font-size: 36px;
+		font-size: 2.1em;
 		
 		&[value="A"] {
-			margin-right: -.2em;
+//			margin-right: -.1em;
 			
 			+ .acc { margin-right: -.2em; }
 		}
 	}
 	
 	.acc {
-		vertical-align: super;
+		vertical-align: 90%;
 	}
 	
 	.triad {
-		font-size: 26px;
+		font-size: 1.1818em;
 	}
 }
 
