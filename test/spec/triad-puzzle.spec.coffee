@@ -109,7 +109,7 @@ describe "Triad", ->
 		it "Shouldn't build a Triad from a wrong symbol", ->
 			@triad = Triad.fromSymbol 'Pdiddy'
 			(expect @triad).toBeUndefined()
-
+	
 	describe ".toSymbol()", ->
 		it "converts a C major triad", =>
 			@triad = new Triad
@@ -139,7 +139,7 @@ describe "Triad", ->
 				type: 2
 				
 			(expect @triad.toSymbol()).toEqual 'Bdim'
-		
+	
 	describe ".toHTML()", ->
 		it "renders a simple C triad", ->
 			@triad = new Triad
