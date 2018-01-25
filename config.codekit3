@@ -47,6 +47,17 @@
 		"oAP": "\/build\/assets\/chriztian-steinmeier-hand-webfont.woff",
 		"oF": 1
 		},
+	"\/assets\/TTP-Icon_120.png": {
+		"ft": 32768,
+		"iS": 21013,
+		"oA": 0,
+		"oAP": "\/build\/assets\/TTP-Icon_120.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/build": {
 		"ft": 65536,
 		"oA": 1,
@@ -215,7 +226,7 @@
 	"creationDate": 526146568,
 	"displayValue": "triad-puzzle",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-karate",
+	"iconImageName": "\/assets\/TTP-Icon_120.png",
 	"lastBuiltDate": 538439510
 	},
 "projectSettings": {
