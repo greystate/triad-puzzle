@@ -1,4 +1,4 @@
-@import "chriz-hand";
+@import "fonts";
 
 @piece_size: 100px;
 @piece_color: #f5f4f0;
@@ -7,31 +7,33 @@
 @paper_color: #f6f6f6;
 
 body {
-	background: @bg_color;
+	background: #fefefe;
 	color: @text_color;
-	font-family: American Typewriter;
 }
 
 h1 {
 	text-align: center;
+	font-family: 'Chriz Hand';
+	font-size: 1em;
+	height: 0;
 }
 
 main h2 {
-	text-align: right;
+	text-align: center;
 	max-width: 50%;
 	margin: auto;
 	font-size: 1em;
-	font-family: Noteworthy;
 	opacity: 0.3;
 	position: relative;
-	
-	transform: translateY(280%) rotate(-2deg);
-	transform-origin: right bottom;
+
+	transform: translateY(150%);
+	z-index: 2;
 }
 
 .sheet {
 	//	font-family: 'Chriz Hand', serif;
-	font-family: Noteworthy, serif;
+	//	font-family: 'Music Symbols', Noteworthy, serif;
+	font-family: 'Dekko', sans-serif;
 	font-weight: bold;
 	background:
 		linear-gradient(
@@ -41,9 +43,9 @@ main h2 {
 			#000 0, #000 17px, transparent 0, transparent 24px,
 			#000 0, #000 25px, transparent 0, transparent 32px,
 			#000 0, #000 33px, transparent 0),
-		@paper_color;
+			@paper_color;
 	background-size: 100% 95px;
-	background-position: center top;
+	background-position: center -5px;
 	border: 2em solid @paper_color;
 	box-shadow: 4px 3px 8px 0 rgba(0, 0, 100, 0.3);
 	transform: rotate(-0.3deg);
@@ -60,7 +62,7 @@ main h2 {
 	list-style: none; 
 	
 	.piece {
-		font-size: 22px;
+		font-size: 26px;
 		letter-spacing: -0.1em;
 		display: inline-block;
 		background: @piece_color;
@@ -74,7 +76,7 @@ main h2 {
 		--rotate: calc(var(--rotation, 0) * 1deg);
 		transform: rotate(var(--rotate));
 		
-		filter: drop-shadow(1px 3px 7px rgba(0, 0, 100, 0.25));
+//		filter: drop-shadow(1px 3px 7px rgba(0, 0, 100, 0.25));
 	}
 	
 	data {
@@ -85,9 +87,9 @@ main h2 {
 		font-size: 2.1em;
 		
 		&[value="A"] {
-//			margin-right: -.1em;
+			margin-right: -0.1em;
 			
-			+ .acc { margin-right: -.2em; }
+			+ .acc { margin-right: -0.2em; }
 		}
 	}
 	
@@ -96,7 +98,13 @@ main h2 {
 	}
 	
 	.triad {
-		font-size: 1.1818em;
+		font-weight: normal;
+		font-size: 1.38em;
+		margin-left: -0.1em;
+		
+		&[value="dim"] {
+			font-size: 1em;
+		}
 	}
 }
 
