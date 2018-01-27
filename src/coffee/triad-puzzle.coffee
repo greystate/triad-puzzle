@@ -8,7 +8,11 @@ class TriadPuzzle
 			if event.keyCode is SPACE_KEY
 				event.preventDefault()
 				@setupSheet()
-				
+		document.body.addEventListener 'touchend', (event) =>
+			target = event.target
+			if target.closest '.piece'
+				@setupSheet()
+		
 
 	setupSheet: (keepExisting = no) ->
 		sheet = document.querySelector @sheetSelector
