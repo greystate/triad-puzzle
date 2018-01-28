@@ -1,0 +1,118 @@
+@import "fonts";
+
+@piece_size: 100px;
+@piece_color: #f5f4f0;
+@text_color: #36505e;
+@bg_color: #f0a846;
+@paper_color: #f6f6f6;
+
+body {
+	background: #fefefe;
+	color: @text_color;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Chriz Hand';
+	font-size: 1em;
+	height: 0;
+}
+
+main h2 {
+	text-align: center;
+	max-width: 50%;
+	margin: auto;
+	font-size: 1em;
+	opacity: 0.3;
+	position: relative;
+
+	transform: translateY(150%);
+	z-index: 2;
+}
+
+.sheet {
+	//	font-family: 'Chriz Hand', serif;
+	//	font-family: 'Music Symbols', Noteworthy, serif;
+	font-family: 'Dekko', sans-serif;
+	font-weight: bold;
+	background:
+		linear-gradient(
+			0deg,
+			#000 0, #000 1px, transparent 0, transparent 8px,
+			#000 0, #000 9px, transparent 0, transparent 16px,
+			#000 0, #000 17px, transparent 0, transparent 24px,
+			#000 0, #000 25px, transparent 0, transparent 32px,
+			#000 0, #000 33px, transparent 0),
+			@paper_color;
+	background-size: 100% 95px;
+	background-position: center -5px;
+	border: 2em solid @paper_color;
+	box-shadow: 4px 3px 8px 0 rgba(0, 0, 100, 0.3);
+	transform: rotate(-0.3deg);
+	
+	max-width: 40em;
+	min-height: 20em;
+	margin: auto;
+	padding: 2em 1em;
+	
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(auto-fill, 180px);
+	justify-items: center;
+	list-style: none; 
+	
+	.piece {
+		font-size: 26px;
+		letter-spacing: -0.1em;
+		display: inline-block;
+		background: @piece_color;
+		border: 2px solid rgba(0, 0, 0, 0.8);
+		width: @piece_size;
+		height: @piece_size;
+		text-align: center;
+		line-height: @piece_size;
+
+		// The `--rotate` variable is set in the `style` attribute
+		--rotate: calc(var(--rotation, 0) * 1deg);
+		transform: rotate(var(--rotate));
+		
+//		filter: drop-shadow(1px 3px 7px rgba(0, 0, 100, 0.25));
+	}
+	
+	data {
+		line-height: 1;
+	}
+	
+	.root {
+		font-size: 2.1em;
+		
+		&[value="A"] {
+			margin-right: -0.1em;
+			
+			+ .acc { margin-right: -0.2em; }
+		}
+	}
+	
+	.acc {
+		vertical-align: 90%;
+	}
+	
+	.triad {
+		font-weight: normal;
+		font-size: 1.38em;
+		margin-left: -0.1em;
+		
+		&[value="dim"] {
+			font-size: 1em;
+		}
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.sheet {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(auto-fill, 120px);
+		
+		padding-top: 1em;
+	}
+} 
