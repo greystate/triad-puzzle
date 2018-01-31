@@ -7,7 +7,7 @@
 		"uuidString": "0949665F-1D29-42D0-9AE6-37D23CABDB2A"
 		}
 	],
-"creatorBuild": "26148",
+"creatorBuild": "26261",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -46,6 +46,13 @@
 		"oA": 2,
 		"oAP": "\/build\/assets\/chriztian-steinmeier-hand-webfont.woff",
 		"oF": 1
+		},
+	"\/assets\/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/assets\/favicon.ico",
+		"oF": 0
 		},
 	"\/assets\/MusicSymbols-Regular.otf": {
 		"cB": 0,
@@ -258,7 +265,7 @@
 	"displayValue": "triad-puzzle",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "\/assets\/TTP-Icon_120.png",
-	"lastBuiltDate": 538770550
+	"lastBuiltDate": 539123862
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -829,6 +836,10 @@
 		"id-match": {
 			"active": 0,
 			"optionString": "'^[a-z]+([A-Z][a-z]+)*$', {'properties': false, 'onlyDeclarations': true}"
+			},
+		"implicit-arrow-linebreak": {
+			"active": 0,
+			"optionString": "'beside'"
 			},
 		"indent": {
 			"active": 0,
