@@ -2,7 +2,11 @@ SPACE_KEY = 32
 PIECES = 8
 
 class TriadPuzzle
-	constructor: (@sheetSelector = '.sheet') ->
+	constructor: (options = {}) ->
+		{ @sheetSelector, @majorAndMinorOnly } = options
+		@sheetSelector ?= '.sheet'
+		@majorAndMinorOnly ?= no
+		
 		@setupSheet()
 		document.body.addEventListener 'keypress', (event) =>
 			if event.keyCode is SPACE_KEY
@@ -40,7 +44,7 @@ class TriadPuzzle
 	getRandomTriad: () ->
 		pitch = randomInt 0, 11
 		acc = randomInt -1, 1
-		type = randomInt 0, 3
+		type = randomInt 0, if @majorAndMinorOnly then 1 else 3
 		new Triad { pitch, acc, type }
 
 # Export

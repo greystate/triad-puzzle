@@ -9,6 +9,7 @@ class TriadPuzzleController
 	
 	setup: () ->
 		@puzzle = new TriadPuzzle
+			majorAndMinorOnly: yes
 
 
 # Start everything when the page is ready
