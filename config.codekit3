@@ -7,7 +7,7 @@
 		"uuidString": "0949665F-1D29-42D0-9AE6-37D23CABDB2A"
 		}
 	],
-"creatorBuild": "26261",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -265,6 +265,7 @@
 	"displayValue": "triad-puzzle",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "\/assets\/TTP-Icon_120.png",
+	"iconImageWasSetByUser": 0,
 	"lastBuiltDate": 539123862
 	},
 "projectSettings": {
@@ -273,6 +274,7 @@
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
+	"autoprefixerEnableIEGrid": 0,
 	"babelAuxiliaryCommentAfter": "",
 	"babelAuxiliaryCommentBefore": "",
 	"babelConfigFileHandlingType": 0,
@@ -2067,6 +2069,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
