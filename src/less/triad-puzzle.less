@@ -5,10 +5,23 @@
 @text_color: #36505e;
 @bg_color: #f0a846;
 @paper_color: #f6f6f6;
+@page_color: #fefefe;
+@staff_color: #000;
+
+:root {
+	--piece-color: @piece_color;
+	--text-color: @text_color;
+	--bg-color: @bg_color;
+	--paper-color: @paper_color;
+	--page-color: @page_color;
+	--staff-color: @staff_color;
+}
 
 body {
-	background: #fefefe;
+	background: @page_color;
+	background: var(--page-color);
 	color: @text_color;
+	color: var(--text-color);
 }
 
 h1 {
@@ -44,11 +57,19 @@ main h2 {
 			#000 0, #000 25px, transparent 0, transparent 32px,
 			#000 0, #000 33px, transparent 0),
 			@paper_color;
+
+	background:
+		linear-gradient(
+			0deg,
+			var(--staff-color) 0, var(--staff-color) 1px, transparent 0, transparent 8px,
+			var(--staff-color) 0, var(--staff-color) 9px, transparent 0, transparent 16px,
+			var(--staff-color) 0, var(--staff-color) 17px, transparent 0, transparent 24px,
+			var(--staff-color) 0, var(--staff-color) 25px, transparent 0, transparent 32px,
+			var(--staff-color) 0, var(--staff-color) 33px, transparent 0),
+			var(--paper-color);
 	background-size: 100% 95px;
 	background-position: center -5px;
-	border: 2em solid @paper_color;
-	box-shadow: 4px 3px 8px 0 rgba(0, 0, 100, 0.3);
-	transform: rotate(-0.3deg);
+	border-color: var(--paper-color);
 	
 	max-width: 40em;
 	min-height: 20em;
@@ -66,6 +87,7 @@ main h2 {
 		letter-spacing: -0.1em;
 		display: inline-block;
 		background: @piece_color;
+		background: var(--piece-color);
 		border: 2px solid rgba(0, 0, 0, 0.8);
 		width: @piece_size;
 		height: @piece_size;
@@ -119,4 +141,14 @@ main h2 {
 		
 		padding-top: 1em;
 	}
-} 
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--piece-color: #343434;
+		--text-color: #4f778d;
+		--bg-color: @bg_color;
+		--paper-color: #434343;
+		--page-color: #222;
+	}
+}
