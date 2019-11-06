@@ -261,7 +261,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var acc, pitch, type;
         pitch = randomInt(0, 11);
         acc = randomInt(-1, 1);
-        type = randomInt(0, 3);
+        type = randomInt(0, 1);
         return new Triad({ pitch: pitch, acc: acc, type: type });
       }
     }]);
