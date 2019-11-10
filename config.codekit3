@@ -111,6 +111,14 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/RELEASE.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/build/RELEASE.sh",
+		"oF": 1
+		},
 	"/src/coffee/app.coffee": {
 		"ft": 32,
 		"ma": 0,
@@ -298,7 +306,7 @@
 	"allowInjectionReloads": 1,
 	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
-	"autoBuildNewItems": 1,
+	"autoBuildNewItems": 0,
 	"autoprefixerEnableIEGrid": 0,
 	"babel7PresetType": 1,
 	"babelAllowRCFiles": 0,
