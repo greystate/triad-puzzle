@@ -187,6 +187,22 @@
 		"sI": 0,
 		"sU": 0
 		},
+	"/src/less/music-symbols.less": {
+		"aP": 1,
+		"bl": 1,
+		"eJ": 0,
+		"ft": 1,
+		"iI": 0,
+		"ma": 0,
+		"mS": 0,
+		"oA": 0,
+		"oAP": "/build/assets/music-symbols.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
 	"/src/less/triad-puzzle.less": {
 		"aP": 1,
 		"bl": 1,
@@ -275,7 +291,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/assets/TTP-Icon_120.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 595075398.80604601
+	"lastBuiltDate": 595085163.98231006
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
