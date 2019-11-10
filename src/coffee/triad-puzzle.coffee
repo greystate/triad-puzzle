@@ -6,7 +6,8 @@ class TriadPuzzle
 		{ @sheetSelector, @majorAndMinorOnly, @add9s } = options
 		@sheetSelector ?= '.sheet'
 		@majorAndMinorOnly ?= no
-		@add9s ?= yes
+		@add9s ?= no
+		@suss ?= no
 		
 		@setupSheet()
 		document.body.addEventListener 'keypress', (event) =>
@@ -48,6 +49,8 @@ class TriadPuzzle
 		type = randomInt 0, if @majorAndMinorOnly then 1 else 3
 		if @add9s and type <= 1
 			if (randomInt 0, 20) > 16 then type += 4
+		if @suss and type <= 1
+			if (randomInt 0, 20) > 13 then type += 6
 		new Triad { pitch, acc, type }
 
 # Export

@@ -10,16 +10,18 @@ TYPE =
 	augmented:  3
 	add9:       4
 	madd9:      5
+	sus2:       6
+	sus4:       7
 
 DEFAULTS =
 	pitch:      0    # 0-11
 	acc:        0    # -1, 0, 1    (b, [nothing/natural], #)
-	type:       0    # 0-3         (major, minor, diminished, augmented)
+	type:       0    # 0-7         (major, minor, diminished, augmented etc.)
 
 ROOTS       = 'C D EF G A B'
 #              012345678901
 ACCIDENTALS = 'b #'
-TYPES       = ['', 'm', 'dim', '+', 'add9', 'm add9']
+TYPES       = ['', 'm', 'dim', '+', 'add9', 'm(add9)', 'sus2', 'sus4']
 
 
 class Triad
