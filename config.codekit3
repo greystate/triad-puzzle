@@ -111,13 +111,13 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/RELEASE.sh": {
+	"/src/about.kit": {
 		"cB": 0,
-		"ft": 8192,
+		"ft": 2048,
 		"hM": 0,
-		"oA": 1,
-		"oAP": "/build/RELEASE.sh",
-		"oF": 1
+		"oA": 0,
+		"oAP": "/build/about.html",
+		"oF": 0
 		},
 	"/src/coffee/app.coffee": {
 		"ft": 32,
