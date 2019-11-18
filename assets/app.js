@@ -352,15 +352,29 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     function TriadPuzzleController() {
       _classCallCheck(this, TriadPuzzleController);
 
+      this.updateSettings = this.updateSettings.bind(this);
       this.setup();
     }
 
     _createClass(TriadPuzzleController, [{
       key: "setup",
       value: function setup() {
+        var $add9s, $majorAndMinorOnly;
+        $majorAndMinorOnly = document.querySelector('#majorAndMinorOnly');
+        $add9s = document.querySelector('#add9s');
+        $majorAndMinorOnly.addEventListener('change', this.updateSettings);
+        $add9s.addEventListener('change', this.updateSettings);
         return this.puzzle = new TriadPuzzle({
-          majorAndMinorOnly: true
+          majorAndMinorOnly: $majorAndMinorOnly.checked,
+          add9s: $add9s.checked
         });
+      }
+    }, {
+      key: "updateSettings",
+      value: function updateSettings(event) {
+        var target;
+        target = event.target;
+        return this.puzzle[target.id] = target.checked;
       }
     }]);
 

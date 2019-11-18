@@ -36,9 +36,7 @@ main h2 {
           transform: translateY(150%);
   z-index: 2;
 }
-.sheet {
-  font-family: 'Dekko', sans-serif;
-  font-weight: bold;
+.paper {
   border: 2em solid;
   background: linear-gradient(0deg, #000 0, #000 1px, transparent 0, transparent 8px, #000 0, #000 9px, transparent 0, transparent 16px, #000 0, #000 17px, transparent 0, transparent 24px, #000 0, #000 25px, transparent 0, transparent 32px, #000 0, #000 33px, transparent 0), #f6f6f6;
   background: linear-gradient(0deg, var(--staff-color) 0, var(--staff-color) 1px, transparent 0, transparent 8px, var(--staff-color) 0, var(--staff-color) 9px, transparent 0, transparent 16px, var(--staff-color) 0, var(--staff-color) 17px, transparent 0, transparent 24px, var(--staff-color) 0, var(--staff-color) 25px, transparent 0, transparent 32px, var(--staff-color) 0, var(--staff-color) 33px, transparent 0), var(--paper-color);
@@ -49,11 +47,17 @@ main h2 {
   min-height: 20em;
   margin: auto;
   padding: 2em 1em;
+}
+.sheet {
+  font-family: 'Dekko', sans-serif;
+  font-weight: bold;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(auto-fill, 180px);
   justify-items: center;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .sheet .piece {
   font-size: 26px;
@@ -107,6 +111,28 @@ main h2 {
 .sheet .triad[value*="add9"],
 .sheet .triad[value*="sus"] {
   font-size: 0.9em;
+}
+.sheet .acc + .triad {
+  margin-left: -0.2em;
+}
+.settings {
+  border: none;
+  margin-top: 4em;
+}
+.settings > div {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+          align-items: baseline;
+}
+.settings > div p {
+  margin: 0;
 }
 @media screen and (max-width: 580px) {
   .sheet {
