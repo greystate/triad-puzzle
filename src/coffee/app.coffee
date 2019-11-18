@@ -8,9 +8,21 @@ class TriadPuzzleController
 		@setup()
 	
 	setup: () ->
+		
+		$majorAndMinorOnly = document.querySelector '#majorAndMinorOnly'
+		$add9s = document.querySelector '#add9s'
+		
+		$majorAndMinorOnly.addEventListener 'change', @updateSettings
+		$add9s.addEventListener 'change', @updateSettings
+		
 		@puzzle = new TriadPuzzle
-			majorAndMinorOnly: yes
-
+			majorAndMinorOnly: $majorAndMinorOnly.checked
+			add9s: $add9s.checked
+	
+	updateSettings: (event) =>
+		target = event.target
+		@puzzle[target.id] = target.checked
+		
 
 # Start everything when the page is ready
 document.addEventListener 'DOMContentLoaded', (event) ->
