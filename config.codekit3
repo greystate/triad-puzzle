@@ -13,9 +13,9 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "/build/.gitignore",
-		"oF": 0
+		"oF": 1
 		},
 	"/assets/chriztian-steinmeier-hand-webfont.eot": {
 		"cB": 0,
@@ -299,7 +299,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/assets/TTP-Icon_120.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 595808621.24204898
+	"lastBuiltDate": 595812636.76865399
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
