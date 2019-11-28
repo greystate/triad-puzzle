@@ -55,7 +55,7 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 2,
+		"oA": 0,
 		"oAP": "/build/assets/favicon.ico",
 		"oF": 0
 		},
@@ -122,7 +122,7 @@
 	"/src/coffee/app.coffee": {
 		"ft": 32,
 		"ma": 0,
-		"mi": 0,
+		"mi": 1,
 		"oA": 0,
 		"oAP": "/build/assets/app.js",
 		"oF": 0,
@@ -133,7 +133,7 @@
 	"/src/coffee/helpers.coffee": {
 		"ft": 32,
 		"ma": 0,
-		"mi": 0,
+		"mi": 1,
 		"oA": 1,
 		"oAP": "/build/assets/helpers.js",
 		"oF": 0,
@@ -144,7 +144,7 @@
 	"/src/coffee/triad-puzzle.coffee": {
 		"ft": 32,
 		"ma": 0,
-		"mi": 0,
+		"mi": 1,
 		"oA": 1,
 		"oAP": "/build/assets/triad-puzzle.js",
 		"oF": 0,
@@ -155,7 +155,7 @@
 	"/src/coffee/triad.coffee": {
 		"ft": 32,
 		"ma": 0,
-		"mi": 0,
+		"mi": 1,
 		"oA": 1,
 		"oAP": "/build/assets/triad.js",
 		"oF": 0,
@@ -235,28 +235,87 @@
 		"oAP": "/build/triad-puzzle.html",
 		"oF": 0
 		},
-	"/test/lib": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/test/lib",
-		"oF": 0
+	"/test/lib/jasmine-2.8.0/boot.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/assets/boot.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/test/lib/jasmine-2.8.0/console.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/assets/console.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/test/lib/jasmine-2.8.0/jasmine-html.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/assets/jasmine-html.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/test/lib/jasmine-2.8.0/jasmine.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "/build/test/lib/jasmine-2.8.0/jasmine.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"/test/lib/jasmine-2.8.0/jasmine.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/assets/jasmine.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/test/lib/jasmine-2.8.0/jasmine_favicon.png": {
+		"ft": 32768,
+		"iS": 1486,
+		"oA": 0,
+		"oAP": "/build/test/lib/jasmine-2.8.0/jasmine_favicon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
 		},
 	"/test/MIT.LICENSE": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/build/test/MIT.LICENSE",
-		"oF": 1
+		"oF": 0
 		},
 	"/test/spec/triad-puzzle.spec.coffee": {
 		"ft": 32,
 		"ma": 0,
-		"mi": 0,
+		"mi": 1,
 		"oA": 0,
-		"oAP": "/test/spec/triad-puzzle.spec.js",
-		"oF": 2,
-		"oS": 1,
+		"oAP": "/build/assets/triad-puzzle.spec.js",
+		"oF": 0,
+		"oS": 0,
 		"sC": 0,
 		"tS": 1
 		},
@@ -264,7 +323,7 @@
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
-		"mi": 0,
+		"mi": 1,
 		"oA": 0,
 		"oAP": "/build/assets/triad-puzzle.spec.min.js",
 		"oF": 0,
@@ -275,9 +334,9 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/build/test/SpecRunner.html",
-		"oF": 1
+		"oF": 0
 		}
 	},
 "hooks": [
@@ -299,7 +358,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "/assets/TTP-Icon_120.png",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 595812636.76865399
+	"lastBuiltDate": 596672973.37004602
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -315,7 +374,7 @@
 	"babelConfigType": 0,
 	"babelCustomPluginsList": "",
 	"babelCustomPresetsList": "",
-	"babelExcludeString": "'node_modules/**', 'bower_components/**', /\\/core-js\\//",
+	"babelExcludeString": "/\\/node_modules\\//, /\\/core-js\\//, /\\/bower_components\\//",
 	"babelInsertModuleIDs": 0,
 	"babelModuleID": "",
 	"babelNoComments": 0,
@@ -753,7 +812,7 @@
 			},
 		"array-callback-return": {
 			"active": 0,
-			"optionString": ""
+			"optionString": "{'allowImplicit': false}"
 			},
 		"array-element-newline": {
 			"active": 0,
@@ -789,7 +848,7 @@
 			},
 		"camelcase": {
 			"active": 0,
-			"optionString": "{'properties': 'always'}"
+			"optionString": "{'properties': 'always', 'ignoreDestructuring': false}"
 			},
 		"capitalized-comments": {
 			"active": 0,
@@ -869,11 +928,11 @@
 			},
 		"func-name-matching": {
 			"active": 0,
-			"optionString": "'always', {'includeCommonJSModuleExports': false}"
+			"optionString": "'always', {'considerPropertyDescriptor': false, 'includeCommonJSModuleExports': false}"
 			},
 		"func-names": {
 			"active": 0,
-			"optionString": "'always'"
+			"optionString": "'always', {'generators': 'always'}"
 			},
 		"func-style": {
 			"active": 0,
@@ -913,7 +972,7 @@
 			},
 		"id-match": {
 			"active": 0,
-			"optionString": "'^[a-z]+([A-Z][a-z]+)*$', {'properties': false, 'onlyDeclarations': true}"
+			"optionString": "'^[a-z]+([A-Z][a-z]+)*$', {'properties': false, 'onlyDeclarations': true, 'ignoreDestructuring': false}"
 			},
 		"implicit-arrow-linebreak": {
 			"active": 0,
@@ -921,7 +980,7 @@
 			},
 		"indent": {
 			"active": 0,
-			"optionString": "4, {'SwitchCase': 0, 'VariableDeclarator': 1, 'outerIIFEBody': 1, }"
+			"optionString": "4, {'SwitchCase': 0, 'VariableDeclarator': 1, 'outerIIFEBody': 1 }"
 			},
 		"init-declarations": {
 			"active": 0,
@@ -1005,7 +1064,7 @@
 			},
 		"new-parens": {
 			"active": 0,
-			"optionString": ""
+			"optionString": "'always'"
 			},
 		"newline-per-chained-call": {
 			"active": 0,
@@ -1057,7 +1116,7 @@
 			},
 		"no-confusing-arrow": {
 			"active": 0,
-			"optionString": "{'allowParens': false}"
+			"optionString": "{'allowParens': true}"
 			},
 		"no-console": {
 			"active": 1,
@@ -1389,7 +1448,7 @@
 			},
 		"no-self-assign": {
 			"active": 1,
-			"optionString": "{'props': false}"
+			"optionString": "{'props': true}"
 			},
 		"no-self-compare": {
 			"active": 0,
@@ -1417,7 +1476,7 @@
 			},
 		"no-tabs": {
 			"active": 0,
-			"optionString": ""
+			"optionString": "{allowIndentationTabs: false}"
 			},
 		"no-template-curly-in-string": {
 			"active": 0,
@@ -1553,7 +1612,7 @@
 			},
 		"object-curly-newline": {
 			"active": 0,
-			"optionString": "{'ObjectExpression': {'multiline': true}, 'ObjectPattern': {'multiline': true}}"
+			"optionString": "{'ObjectExpression': {'multiline': true, 'consistent': true}, 'ObjectPattern': {'multiline': true, 'consistent': true}}"
 			},
 		"object-curly-spacing": {
 			"active": 0,
@@ -1561,7 +1620,7 @@
 			},
 		"object-property-newline": {
 			"active": 0,
-			"optionString": "{'allowMultiplePropertiesPerLine': true}"
+			"optionString": "{'allowAllPropertiesOnSameLine': true}"
 			},
 		"object-shorthand": {
 			"active": 0,
@@ -1689,7 +1748,7 @@
 			},
 		"sort-keys": {
 			"active": 0,
-			"optionString": "'asc', {'caseSensitive': true, 'natural': false}"
+			"optionString": "'asc', {'caseSensitive': true, 'natural': false, 'minKeys': 2}"
 			},
 		"sort-vars": {
 			"active": 0,
@@ -2137,7 +2196,7 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 1,
 		"createSourceMap": 0,
-		"minifyOutput": 0,
+		"minifyOutput": 1,
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 0,
 		"transpilerStyle": 1
@@ -2197,7 +2256,7 @@
 		"autoOutputPathStyle": 1,
 		"bundleFormat": 0,
 		"createSourceMap": 0,
-		"minifyOutput": 0,
+		"minifyOutput": 1,
 		"syntaxCheckerStyle": 0,
 		"transpilerStyle": 0
 		},
@@ -2214,10 +2273,10 @@
 	"languageDefaultsKIT": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.html",
-		"autoOutputPathRelativePath": "public",
+		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "kit",
 		"autoOutputPathReplace2": "html",
-		"autoOutputPathStyle": 0,
+		"autoOutputPathStyle": 1,
 		"shouldRunCacheBuster": 0,
 		"shouldRunHTMLMinifier": 0
 		},
@@ -2261,7 +2320,7 @@
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
-		"autoOutputAction": 2,
+		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.*",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
@@ -2344,7 +2403,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"pluginMask": 3758088159
+		"pluginMask": 52780316221407
 		},
 	"languageDefaultsTS": {
 		"autoOutputAction": 0,
@@ -2384,7 +2443,7 @@
 	"rollupExternals": "",
 	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
 	"rollupTreeshakingEnabled": 1,
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules, /test/lib",
+	"skippedFoldersString": "_cache,cache,.idea,log,_logs,logs,node_modules,/storage/framework/sessions,/websiteicons",
 	"sourceFolderName": "src",
 	"susyVersion": 3,
 	"tsAllowSyntheticDefaultImports": 0,
@@ -2468,7 +2527,7 @@
 			"flagValue": -1
 			},
 		"dead_code": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"directives": {
@@ -2500,7 +2559,7 @@
 			"flagValue": -1
 			},
 		"hoist_funs": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"hoist_props": {
@@ -2544,7 +2603,7 @@
 			"flagValue": -1
 			},
 		"keep_fargs": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"keep_fnames": {
@@ -2672,7 +2731,7 @@
 			"flagValue": -1
 			},
 		"unused": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"warnings": {
@@ -2689,7 +2748,7 @@
 			}
 		},
 	"uglifyMangleNames": 1,
-	"uglifyReservedNamesString": "$",
+	"uglifyReservedNamesString": "$,exports,require",
 	"websiteRelativeRoot": "/build"
 	},
 "settingsFileVersion": "3"
