@@ -27,7 +27,7 @@ body {
 h1 {
 	text-align: center;
 	font-family: 'Chriz Hand';
-	font-size: 1em;
+	font-size: 1.6em;
 	height: 0;
 }
 
@@ -35,9 +35,10 @@ main h2 {
 	text-align: center;
 	max-width: 50%;
 	margin: auto;
-	font-size: 1em;
-	opacity: 0.3;
+	font-size: 1.2em;
+	opacity: 0.5;
 	position: relative;
+	letter-spacing: 0.1em;
 
 	transform: translateY(150%);
 	z-index: 2;
@@ -152,7 +153,12 @@ main h2 {
 .settings {
 	border: none;
 	margin-top: 4em;
-
+	font-family: "Marker Felt", sans-serif;
+	
+	legend {
+		margin-bottom: 0.5em;
+	}
+	
 	> div {
 		display: flex;
 		flex-direction: row;

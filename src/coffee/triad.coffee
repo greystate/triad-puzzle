@@ -22,6 +22,7 @@ ROOTS       = 'C D EF G A B'
 #              012345678901
 ACCIDENTALS = 'b #'
 TYPES       = ['', 'm', 'dim', '+', 'add9', 'm(add9)', 'sus2', 'sus4']
+ARIA_TYPES  = ['major', 'minor', 'diminished', 'augmented', 'add nine', 'minor add nine', 'sus two', 'sus four']
 
 
 class Triad
@@ -75,10 +76,27 @@ class Triad
 				else
 					''
 	
-	typeName: () -> TYPES[@type]
+	typeName: (forARIA = false) ->
+		if forARIA is yes
+			ARIA_TYPES[@type]
+		else
+			TYPES[@type]
 	
 	toSymbol: () -> "#{@rootName()}#{@typeName()}"
 
+	toAriaLabel: () ->
+		base = @baseName()
+		acc = switch @acc
+			when -1
+				'flat'
+			when 1
+				'sharp'
+			else ''
+		accEntity = @accidentalSign yes
+		type = @typeName yes
+		
+		"#{base} #{acc} #{type}"
+	
 	toHTML: () ->
 		base = @baseName()
 		acc = @accidentalSign()
@@ -91,7 +109,7 @@ class Triad
 		parts = [baseHTML, accHTML, typeHTML].filter (val) => val isnt ''
 		
 		"""
-		<span class="piece">
+		<span class="piece" aria-label="#{@toAriaLabel()}">
 			#{parts.join '\n\t'}
 		</span>
 		"""
