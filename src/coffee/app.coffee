@@ -26,6 +26,7 @@ class TriadPuzzleController
 	updateSettings: (event) =>
 		target = event.target
 		@puzzle[target.id] = target.checked
+		@drawPuzzle()
 	
 	drawPuzzle: () ->
 		{ majorAndMinorOnly, add9s } = @getSettings()
