@@ -38,6 +38,60 @@ class Triad {
 			if (this.acc == null) { this.acc = DEFAULTS.acc }
 			if (this.type == null) { this.type = DEFAULTS.type }
 		}
+
+		this.validate()
+	}
+
+	validate() {
+		switch (this.acc) {
+			case ACCIDENTAL.flat:
+				switch (this.pitch) {
+					case 0:
+					case 2:
+					case 5:
+					case 7:
+					case 9:
+						// Can't be represented as a "flat"
+						this.acc = ACCIDENTAL.natural
+						break
+				}
+				break
+
+			case ACCIDENTAL.natural:
+				switch (this.pitch) {
+					case 1:
+					case 3:
+					case 6:
+					case 8:
+						this.acc = ACCIDENTAL.sharp
+						break
+					case 10:
+						this.acc = ACCIDENTAL.flat
+						break
+				}
+				break
+
+			case ACCIDENTAL.sharp:
+				switch (this.pitch) {
+					case 2:
+					case 4:
+					case 7:
+					case 9:
+					case 11:
+						// Can't be represented as a "sharp"
+						this.acc = ACCIDENTAL.natural
+						break
+				}
+				break
+		}
+	}
+
+	baseName() {
+		let index = this.pitch - this.acc
+		if (index > 11) { index = 0 }
+		if (index < 0) { index = 11 }
+
+		return ROOTS.charAt(index)
 	}
 
 	static fromSymbol(symbol) {

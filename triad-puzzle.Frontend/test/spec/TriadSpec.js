@@ -27,11 +27,62 @@ describe('Triad', function() {
 		})
 
 		it('can create with a symbol too', function() {
-			expect(this.notherTriad.pitch).toEqual( 8)
+			expect(this.notherTriad.pitch).toEqual(8)
 			expect(this.notherTriad.acc).toEqual(-1)
 			expect(this.notherTriad.type).toEqual( 2)
 		})
 	})
+
+	describe('validation', function() {
+		it(`fixes 'impossible flats'`, function() {
+			const triad = new Triad({
+				pitch: 0,
+				acc: -1
+			})
+
+			expect(triad.acc).toEqual(0)
+		})
+
+		it(`fixes 'impossible sharps'`, function() {
+			const triad = new Triad({
+				pitch: 4,
+				acc: 1
+			})
+
+			expect(triad.acc).toEqual(0)
+		})
+
+		it(`fixes 'impossible naturals'`, function() {
+			const triadBflat = new Triad({
+				pitch: 10,
+				acc: 0
+			})
+
+			const triadFsharp = new Triad({
+				pitch: 6,
+				acc: 0
+			})
+
+			expect(triadBflat.acc).toEqual(-1)
+			expect(triadFsharp.acc).toEqual(1)
+		})
+
+		it('fixes out of range root values', function() {
+			const triadOver = new Triad({
+				pitch: 11,
+				acc: -1
+			})
+
+			const triadUnder = new Triad({
+				pitch: 0,
+				acc: 1
+			})
+
+			expect(triadOver.baseName()).toEqual('C')
+			expect(triadUnder.baseName()).toEqual('B')
+		})
+	})
+
 
 	describe('.fromSymbol()', function() {
 		it('builds a minor Triad from its symbol', function() {
