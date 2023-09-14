@@ -4,170 +4,91 @@
     {
       "name" : "Process All Remaining Files and Folders",
       "stepType" : 1,
-      "uuidString" : "0949665F-1D29-42D0-9AE6-37D23CABDB2A"
+      "uuidString" : "5CD93953-8419-48F3-B317-31E1D510E58B"
     }
   ],
   "creatorBuild" : "34513",
   "files" : {
-    "\/.gitignore" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/build\/.gitignore",
-      "oF" : 1
-    },
-    "\/.nova" : {
-      "ft" : 65536,
-      "oA" : 1,
-      "oAP" : "\/build\/.nova",
-      "oF" : 0
-    },
-    "\/assets\/chriztian-steinmeier-hand-webfont.eot" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/build\/assets\/chriztian-steinmeier-hand-webfont.eot",
-      "oF" : 1
-    },
-    "\/assets\/chriztian-steinmeier-hand-webfont.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/build\/assets\/chriztian-steinmeier-hand-webfont.svg",
-      "oF" : 1,
-      "opt" : 0,
-      "plM" : 3758088159,
-      "prP" : 0
-    },
-    "\/assets\/chriztian-steinmeier-hand-webfont.ttf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/build\/assets\/chriztian-steinmeier-hand-webfont.ttf",
-      "oF" : 1
-    },
-    "\/assets\/chriztian-steinmeier-hand-webfont.woff" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/build\/assets\/chriztian-steinmeier-hand-webfont.woff",
-      "oF" : 1
-    },
-    "\/assets\/favicon.ico" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/assets\/favicon.ico",
-      "oF" : 0
-    },
-    "\/assets\/MusicSymbols-Regular.otf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/build\/assets\/MusicSymbols-Regular.otf",
-      "oF" : 0
-    },
-    "\/assets\/MusicSymbols-Regular.ttf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/build\/assets\/MusicSymbols-Regular.ttf",
-      "oF" : 0
-    },
-    "\/assets\/TTP-Icon_120.png" : {
-      "ft" : 32768,
-      "iS" : 21013,
-      "oA" : 0,
-      "oAP" : "\/build\/assets\/TTP-Icon_120.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/build" : {
       "ft" : 65536,
       "oA" : 1,
       "oAP" : "\/build\/build",
       "oF" : 0
     },
-    "\/README.md" : {
-      "cB" : 0,
-      "cS" : 0,
-      "eF" : 1,
-      "eL" : 1,
-      "ema" : 1,
-      "eSQ" : 1,
-      "ft" : 4096,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/build\/README.html",
+    "\/icons\/apple-touch-icon.png" : {
+      "ft" : 32768,
+      "iS" : 7644,
+      "oA" : 0,
+      "oAP" : "\/build\/icons\/apple-touch-icon.png",
       "oF" : 0,
-      "oFM" : 0,
-      "oS" : 0,
-      "pHT" : 0,
-      "pME" : 1,
-      "rFN" : 0,
-      "uCM" : 0
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
     },
-    "\/src\/about.kit" : {
+    "\/icons\/favicon.ico" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/icons\/favicon.ico",
+      "oF" : 0
+    },
+    "\/icons\/icon-192.png" : {
+      "ft" : 32768,
+      "iS" : 7557,
+      "oA" : 0,
+      "oAP" : "\/build\/icons\/icon-192.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/icons\/icon-512.png" : {
+      "ft" : 32768,
+      "iS" : 34047,
+      "oA" : 0,
+      "oAP" : "\/build\/icons\/icon-512.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/icons\/manifest.webmanifest" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/icons\/manifest.webmanifest",
+      "oF" : 0
+    },
+    "\/src\/assets\/logo.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/assets\/logo.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/src\/components\/_all.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/about.html",
+      "oA" : 1,
+      "oAP" : "\/build\/components\/_all.html",
       "oF" : 0
     },
-    "\/src\/coffee\/app.coffee" : {
-      "ft" : 32,
-      "ma" : 0,
-      "mi" : 2,
-      "oA" : 0,
-      "oAP" : "\/build\/assets\/app.js",
-      "oF" : 0,
-      "oS" : 0,
-      "tS" : 0
-    },
-    "\/src\/coffee\/helpers.coffee" : {
-      "ft" : 32,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/build\/assets\/helpers.js",
-      "oF" : 0,
-      "oS" : 0,
-      "tS" : 1
-    },
-    "\/src\/coffee\/triad-puzzle.coffee" : {
-      "ft" : 32,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/build\/assets\/triad-puzzle.js",
-      "oF" : 0,
-      "oS" : 0,
-      "tS" : 1
-    },
-    "\/src\/coffee\/triad.coffee" : {
-      "ft" : 32,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/build\/assets\/triad.js",
-      "oF" : 0,
-      "oS" : 0,
-      "tS" : 1
-    },
-    "\/src\/less\/chriz-hand.less" : {
+    "\/src\/components\/all.less" : {
       "aP" : 1,
       "bl" : 1,
       "co" : 0,
@@ -177,7 +98,347 @@
       "ma" : 0,
       "mS" : 0,
       "oA" : 1,
-      "oAP" : "\/build\/assets\/chriz-hand.css",
+      "oAP" : "\/build\/assets\/all.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
+    "\/src\/components\/index.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/components\/index.html",
+      "oF" : 0
+    },
+    "\/src\/components\/placeholder\/_placeholder.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/placeholder\/_placeholder.html",
+      "oF" : 0
+    },
+    "\/src\/components\/placeholder\/placeholder.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/placeholder.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
+    "\/src\/components\/text\/_h2.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/text\/_h2.html",
+      "oF" : 0
+    },
+    "\/src\/components\/text\/_h3.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/text\/_h3.html",
+      "oF" : 0
+    },
+    "\/src\/components\/text\/_h4.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/text\/_h4.html",
+      "oF" : 0
+    },
+    "\/src\/components\/text\/_olist.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/text\/_olist.html",
+      "oF" : 0
+    },
+    "\/src\/components\/text\/_p1l.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/text\/_p1l.html",
+      "oF" : 0
+    },
+    "\/src\/components\/text\/_p1s.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/text\/_p1s.html",
+      "oF" : 0
+    },
+    "\/src\/components\/text\/_p2l.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/text\/_p2l.html",
+      "oF" : 0
+    },
+    "\/src\/components\/text\/_p2s.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/text\/_p2s.html",
+      "oF" : 0
+    },
+    "\/src\/components\/text\/_quote.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/text\/_quote.html",
+      "oF" : 0
+    },
+    "\/src\/components\/text\/_text.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/text\/_text.html",
+      "oF" : 0
+    },
+    "\/src\/components\/text\/_ulist.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/text\/_ulist.html",
+      "oF" : 0
+    },
+    "\/src\/components\/text\/text.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/text.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
+    "\/src\/js\/app.module.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/app.module.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/src\/js\/app.nomodule.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/app.nomodule.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 1
+    },
+    "\/src\/js\/modules\/app.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/app.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/src\/js\/modules\/point.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/point.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/src\/kit\/dashboard\/index.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/dashboard\/index.html",
+      "oF" : 0
+    },
+    "\/src\/kit\/index.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/index.html",
+      "oF" : 0
+    },
+    "\/src\/kit\/shared\/_constants.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/shared\/_constants.html",
+      "oF" : 0
+    },
+    "\/src\/kit\/shared\/_cpl_nav.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/shared\/_cpl_nav.html",
+      "oF" : 0
+    },
+    "\/src\/kit\/shared\/_head_content.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/shared\/_head_content.html",
+      "oF" : 0
+    },
+    "\/src\/kit\/shared\/_script_content.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/shared\/_script_content.html",
+      "oF" : 0
+    },
+    "\/src\/layouts\/all.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/all.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
+    "\/src\/layouts\/default.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/default.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
+    "\/src\/less\/app.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/app.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
+    "\/src\/less\/basics.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/basics.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
+    "\/src\/less\/constants.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/constants.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
+    "\/src\/less\/flowz.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/flowz.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -203,7 +464,7 @@
       "sI" : 0,
       "sU" : 0
     },
-    "\/src\/less\/music-symbols.less" : {
+    "\/src\/less\/mixins.less" : {
       "aP" : 1,
       "bl" : 1,
       "co" : 0,
@@ -212,8 +473,8 @@
       "iI" : 0,
       "ma" : 0,
       "mS" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/assets\/music-symbols.css",
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/mixins.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -221,7 +482,7 @@
       "sI" : 0,
       "sU" : 0
     },
-    "\/src\/less\/triad-puzzle.less" : {
+    "\/src\/less\/reset.less" : {
       "aP" : 1,
       "bl" : 1,
       "co" : 0,
@@ -230,8 +491,8 @@
       "iI" : 0,
       "ma" : 0,
       "mS" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/assets\/triad-puzzle.css",
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/reset.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -239,61 +500,81 @@
       "sI" : 0,
       "sU" : 0
     },
-    "\/src\/triad-puzzle.kit" : {
+    "\/src\/media\/.gitkeep" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/media\/.gitkeep",
+      "oF" : 0
+    },
+    "\/src\/panels\/_all.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/panels\/_all.html",
+      "oF" : 0
+    },
+    "\/src\/panels\/all.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/all.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
+    "\/src\/panels\/index.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/build\/triad-puzzle.html",
+      "oAP" : "\/build\/panels\/index.html",
       "oF" : 0
     },
-    "\/test\/lib\/jasmine-2.8.0\/boot.js" : {
-      "bF" : 0,
-      "ft" : 64,
+    "\/src\/panels\/sample-panel\/_sample-panel.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/panels\/sample-panel\/_sample-panel.html",
+      "oF" : 0
+    },
+    "\/src\/panels\/sample-panel\/sample-panel.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
       "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/build\/assets\/boot.min.js",
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/sample-panel.css",
       "oF" : 0,
-      "sC" : 0,
-      "tS" : 0
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
     },
-    "\/test\/lib\/jasmine-2.8.0\/console.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/build\/assets\/console.min.js",
-      "oF" : 0,
-      "sC" : 0,
-      "tS" : 0
+    "\/test" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/build\/test",
+      "oF" : 0
     },
-    "\/test\/lib\/jasmine-2.8.0\/jasmine_favicon.png" : {
-      "ft" : 32768,
-      "iS" : 1486,
-      "oA" : 0,
-      "oAP" : "\/build\/test\/lib\/jasmine-2.8.0\/jasmine_favicon.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/test\/lib\/jasmine-2.8.0\/jasmine-html.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/build\/assets\/jasmine-html.min.js",
-      "oF" : 0,
-      "sC" : 0,
-      "tS" : 0
-    },
-    "\/test\/lib\/jasmine-2.8.0\/jasmine.css" : {
+    "\/vendor\/componentize\/componentize.css" : {
       "aP" : 0,
       "bl" : 0,
       "ci" : 0,
@@ -301,80 +582,47 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 2,
-      "oAP" : "\/build\/test\/lib\/jasmine-2.8.0\/jasmine.css",
+      "oAP" : "\/build\/assets\/componentize.css",
       "oF" : 0,
       "pg" : 0
     },
-    "\/test\/lib\/jasmine-2.8.0\/jasmine.js" : {
+    "\/vendor\/componentize\/componentize.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
-      "mi" : 1,
+      "mi" : 0,
       "oA" : 0,
-      "oAP" : "\/build\/assets\/jasmine.min.js",
+      "oAP" : "\/build\/assets\/componentize.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
     },
-    "\/test\/MIT.LICENSE" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/test\/MIT.LICENSE",
-      "oF" : 0
-    },
-    "\/test\/spec\/triad-puzzle.spec.coffee" : {
-      "ft" : 32,
+    "\/vendor\/modern-css-reset\/reset.css" : {
+      "aP" : 0,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
       "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/build\/assets\/triad-puzzle.spec.js",
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/reset.css",
       "oF" : 0,
-      "oS" : 0,
-      "tS" : 1
-    },
-    "\/test\/spec\/triad-puzzle.spec.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/build\/assets\/triad-puzzle.spec.min.js",
-      "oF" : 0,
-      "sC" : 0,
-      "tS" : 0
-    },
-    "\/test\/SpecRunner.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/test\/SpecRunner.html",
-      "oF" : 0
+      "pg" : 0
     }
   },
   "hooks" : [
-    {
-      "enabled" : 1,
-      "name" : "XSLT Lint",
-      "predicateDataBase64Encoded" : "YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBYLDBMYICorLjU5Pj9CRkpPUFNaYGRmVSRudWxs0w0ODxAREl8QF05TQ29tcG91bmRQcmVkaWNhdGVUeXBlXxAPTlNTdWJwcmVkaWNhdGVzViRjbGFzcxACgAKAFdIUDxUXWk5TLm9iamVjdHOhFoADgBTUDxkaGxwdHh9fEBFOU1JpZ2h0RXhwcmVzc2lvbl8QEE5TTGVmdEV4cHJlc3Npb25fEBNOU1ByZWRpY2F0ZU9wZXJhdG9ygBOADoAEgBHVISIjJA8lJicoKVlOU09wZXJhbmReTlNTZWxlY3Rvck5hbWVfEBBOU0V4cHJlc3Npb25UeXBlW05TQXJndW1lbnRzgAaABRADgAiADVx2YWx1ZUZvcktleTrSIw8sLRABgAfSLzAxMlokY2xhc3NuYW1lWCRjbGFzc2VzXxAQTlNTZWxmRXhwcmVzc2lvbqMxMzRcTlNFeHByZXNzaW9uWE5TT2JqZWN00hQPNjihN4AJgAzTDyM6Ozw9WU5TS2V5UGF0aIALEAqACl1pbnB1dEZpbGVuYW1l0i8wQEFfEBxOU0tleVBhdGhTcGVjaWZpZXJFeHByZXNzaW9uo0AzNNIvMENEXk5TTXV0YWJsZUFycmF5o0NFNFdOU0FycmF50i8wR0hfEBNOU0tleVBhdGhFeHByZXNzaW9upEdJMzRfEBROU0Z1bmN0aW9uRXhwcmVzc2lvbtNLIw9MTU5fEA9OU0NvbnN0YW50VmFsdWWADxAAgBBVLnhzbHTSLzBRUl8QGU5TQ29uc3RhbnRWYWx1ZUV4cHJlc3Npb26jUTM01Q9UVVZXWE0nLFlaTlNNb2RpZmllcldOU0ZsYWdzWk5TUG9zaXRpb25eTlNPcGVyYXRvclR5cGWAEhAJ0i8wW1xfEBxOU1N1YnN0cmluZ1ByZWRpY2F0ZU9wZXJhdG9ypF1eXzRfEBxOU1N1YnN0cmluZ1ByZWRpY2F0ZU9wZXJhdG9yXxAZTlNTdHJpbmdQcmVkaWNhdGVPcGVyYXRvcl8QE05TUHJlZGljYXRlT3BlcmF0b3LSLzBhYl8QFU5TQ29tcGFyaXNvblByZWRpY2F0ZaNhYzRbTlNQcmVkaWNhdGXSLzBFZaJFNNIvMGdoXxATTlNDb21wb3VuZFByZWRpY2F0ZaNnYzQACAARABoAJAApADIANwBJAEwAUQBTAGwAcgB5AJMApQCsAK4AsACyALcAwgDEAMYAyADRAOUA+AEOARABEgEUARYBIQErAToBTQFZAVsBXQFfAWEBYwFwAXUBdwF5AX4BiQGSAaUBqQG2Ab8BxAHGAcgBygHRAdsB3QHfAeEB7wH0AhMCFwIcAisCLwI3AjwCUgJXAm4CdQKHAokCiwKNApMCmAK0ArgCwwLOAtYC4QLwAvIC9AL5AxgDHQM8A1gDbgNzA4sDjwObA6ADowOoA74AAAAAAAACAQAAAAAAAABpAAAAAAAAAAAAAAAAAAADwg==",
-      "runOrder" : 0,
-      "scriptSourceString" : "",
-      "scriptType" : 1,
-      "uuidString" : "13D2EEE9-7D85-47EC-B2E8-D93259F7B72E"
-    }
+
   ],
   "manualImportLinks" : {
 
   },
   "projectAttributes" : {
-    "creationDate" : 526146568,
-    "displayValue" : "triad-puzzle",
+    "creationDate" : 602205694.45881498,
+    "displayValue" : "​The Triad Puzzle",
     "displayValueWasSetByUser" : 0,
-    "iconImageName" : "\/assets\/TTP-Icon_120.png",
+    "iconImageName" : "\/icons\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 673121349.40933597
+    "lastBuiltDate" : 700315156.98004997
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
@@ -668,14 +916,14 @@
     "bowerUseExactVersion" : 0,
     "browserRefreshDelay" : 0,
     "browserslistString" : ">0.2%, last 2 versions, Firefox ESR, not dead",
-    "buildEnvironment" : 1,
+    "buildEnvironment" : 0,
     "buildFolderActive" : 1,
     "buildFolderName" : "build",
     "cleanBuild" : 1,
     "cssoForceMediaMerge" : 0,
     "cssoRestructure" : 1,
     "environmentVariableEntries" : [
-      "NODE_ENV:::development"
+      "NODE_ENV:::production"
     ],
     "esLintConfigFileHandlingType" : 0,
     "esLintECMAVersion" : 7,
@@ -1153,7 +1401,7 @@
         "active" : 0
       },
       "no-loss-of-precision" : {
-        "active" : 1
+        "active" : 0
       },
       "no-magic-numbers" : {
         "active" : 0,
@@ -1172,7 +1420,7 @@
       },
       "no-multi-assign" : {
         "active" : 0,
-        "optionString" : ""
+        "optionString" : "{'ignoreNonDeclaration': false}"
       },
       "no-multi-spaces" : {
         "active" : 0,
@@ -1210,7 +1458,7 @@
         "active" : 0
       },
       "no-nonoctal-decimal-escape" : {
-        "active" : 1
+        "active" : 0
       },
       "no-obj-calls" : {
         "active" : 1
@@ -1281,7 +1529,7 @@
       },
       "no-sequences" : {
         "active" : 0,
-        "optionString" : ""
+        "optionString" : "{'allowInParentheses': true}"
       },
       "no-setter-return" : {
         "active" : 1
@@ -1355,7 +1603,7 @@
         "optionString" : ""
       },
       "no-unsafe-optional-chaining" : {
-        "active" : 1,
+        "active" : 0,
         "optionString" : "{'disallowArithmeticOperators': false}"
       },
       "no-unused-expressions" : {
@@ -1377,7 +1625,7 @@
         "optionString" : "{'functions': true, 'classes': true, 'variables': true}"
       },
       "no-useless-backreference" : {
-        "active" : 1
+        "active" : 0
       },
       "no-useless-call" : {
         "active" : 0
@@ -1522,7 +1770,7 @@
       },
       "require-atomic-updates" : {
         "active" : 0,
-        "optionString" : ""
+        "optionString" : "{'allowProperties': false}"
       },
       "require-await" : {
         "active" : 0
@@ -1655,10 +1903,10 @@
     "languageDefaultsCSS" : {
       "autoOutputAction" : 2,
       "autoOutputPathFilenamePattern" : "*.css",
-      "autoOutputPathRelativePath" : "",
+      "autoOutputPathRelativePath" : "assets",
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
-      "autoOutputPathStyle" : 0,
+      "autoOutputPathStyle" : 1,
       "combineImports" : 0,
       "cssoStyle" : 0,
       "purgeCSSStyle" : 0,
@@ -1700,19 +1948,19 @@
       "autoOutputPathReplace2" : "",
       "autoOutputPathStyle" : 0,
       "outputFormat" : 0,
-      "quality" : 100,
+      "quality" : 90,
       "webpOptimizationPresetUUID" : "lpckwebp-none",
       "webpRGBQuality" : 75
     },
     "languageDefaultsJS" : {
       "autoOutputAction" : 0,
-      "autoOutputPathFilenamePattern" : "*.min.js",
+      "autoOutputPathFilenamePattern" : "*.js",
       "autoOutputPathRelativePath" : "assets",
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
       "autoOutputPathStyle" : 1,
       "bundleFormat" : 0,
-      "minifierStyle" : 1,
+      "minifierStyle" : 0,
       "sourceMapStyle" : 0,
       "syntaxCheckerStyle" : 0,
       "transpilerStyle" : 0
@@ -1732,8 +1980,8 @@
       "autoOutputPathFilenamePattern" : "*.html",
       "autoOutputPathRelativePath" : "",
       "autoOutputPathReplace1" : "kit",
-      "autoOutputPathReplace2" : "html",
-      "autoOutputPathStyle" : 1,
+      "autoOutputPathReplace2" : "",
+      "autoOutputPathStyle" : 3,
       "htmlMinifierStyle" : 0,
       "shouldRunCacheBuster" : 0
     },
@@ -1796,7 +2044,7 @@
       "autoOutputPathReplace2" : "",
       "autoOutputPathStyle" : 0,
       "optimizerType" : 1,
-      "quality" : 100,
+      "quality" : 90,
       "webpOptimizationPresetUUID" : "lpckwebp-none",
       "webpRGBQuality" : 75
     },
@@ -1889,6 +2137,17 @@
     },
     "languageDefaultsUserDefined" : [
       {
+        "autoOutputAction" : 2,
+        "autoOutputPathFilenamePattern" : "*.cshtml",
+        "autoOutputPathRelativePath" : "views",
+        "autoOutputPathReplace1" : "",
+        "autoOutputPathReplace2" : "",
+        "autoOutputPathStyle" : 1,
+        "fileExtension" : "cshtml",
+        "htmlMinifierStyle" : 0,
+        "shouldRunCacheBuster" : 0
+      },
+      {
         "autoOutputAction" : 0,
         "autoOutputPathFilenamePattern" : "*.xslt",
         "autoOutputPathRelativePath" : "",
@@ -1948,7 +2207,7 @@
     ],
     "rollupTreeshakingEnabled" : 1,
     "rollupTreeshakingModuleSideEffects" : 1,
-    "skippedFoldersString" : "log,cache,node_modules,\/websiteicons,\/.nova,logs,_logs,\/storage\/framework\/sessions,_cache,.idea",
+    "skippedFoldersString" : "\/websiteicons,\/storage\/framework\/sessions,node_modules,_logs,logs,log,.idea,_cache,cache,\/test",
     "sourceFolderName" : "src",
     "susyVersion" : 3,
     "tsAllowArbitraryExtensions" : 0,
