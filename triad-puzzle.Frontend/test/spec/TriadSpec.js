@@ -20,13 +20,13 @@ describe('Triad', function() {
 			expect(this.triad.type).toEqual(0)
 		})
 
-		it('can create a D#m triad as well', function() {
+		it('can create a D#m triad', function() {
 			expect(this.otherTriad.pitch).toEqual(3)
 			expect(this.otherTriad.acc).toEqual(1)
 			expect(this.otherTriad.type).toEqual(1)
 		})
 
-		it('can create with a symbol too', function() {
+		it('can be created from a symbol', function() {
 			expect(this.notherTriad.pitch).toEqual(8)
 			expect(this.notherTriad.acc).toEqual(-1)
 			expect(this.notherTriad.type).toEqual( 2)
