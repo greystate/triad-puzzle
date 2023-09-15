@@ -125,4 +125,26 @@ describe('Triad', function() {
 	})
 
 
+	describe('.toAriaLabel()', function() {
+		it('reads out an E triad', function() {
+			const triad = new Triad('E')
+
+			expect(triad.toAriaLabel()).toEqual('E major')
+		})
+
+		it('reads out a Dbm triad', function() {
+			const triad = new Triad('Dbm')
+
+			expect(triad.toAriaLabel()).toEqual('D flat minor')
+		})
+
+		it('reads out an F#+ triad', function() {
+			const triad = new Triad('F#+')
+
+			expect(triad.toAriaLabel()).toEqual('F sharp augmented')
+		})
+	})
+
+
+
 })

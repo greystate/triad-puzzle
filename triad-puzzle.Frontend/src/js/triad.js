@@ -94,6 +94,34 @@ class Triad {
 		return ROOTS.charAt(index)
 	}
 
+	typeName(forARIA = false) {
+		if (forARIA === true) {
+			return ARIA_TYPES[this.type]
+		} else {
+			return TYPES[this.type]
+		}
+	}
+	toAriaLabel() {
+		const base = this.baseName()
+		let acc = ''
+		switch (this.acc) {
+			case -1:
+				acc = 'flat'
+				break
+			case 1:
+				acc = 'sharp'
+				break
+			default:
+				acc = ''
+				break
+		}
+
+		const accEntity = this.accidentalSign(true)
+		const type = this.typeName(true)
+		let label = `${base} ${acc} ${type}`
+
+		return label.replace(/\s+/, ' ')
+	}
 	static fromSymbol(symbol) {
 		let result
 
