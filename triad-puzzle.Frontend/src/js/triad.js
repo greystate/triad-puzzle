@@ -94,6 +94,22 @@ class Triad {
 		return ROOTS.charAt(index)
 	}
 
+	accidentalSign(forHTML = false) {
+		if (!forHTML) {
+			switch (this.acc) {
+				case -1:
+					return 'b'
+					break
+				case 1:
+					return '#'
+					break
+				default:
+					return ''
+					break
+			}
+		}
+	}
+
 	typeName(forARIA = false) {
 		if (forARIA === true) {
 			return ARIA_TYPES[this.type]
@@ -101,6 +117,15 @@ class Triad {
 			return TYPES[this.type]
 		}
 	}
+
+	rootName() {
+		return `${this.baseName()}${this.accidentalSign()}`
+	}
+
+	toSymbol() {
+		return `${this.rootName()}${this.typeName()}`
+	}
+
 	toAriaLabel() {
 		const base = this.baseName()
 		let acc = ''
@@ -122,6 +147,22 @@ class Triad {
 
 		return label.replace(/\s+/, ' ')
 	}
+
+	toHTML() {
+		const base = this.baseName()
+		const acc = this.accidentalSign()
+		const accEntity = this.accidentalSign(true)
+		const type = this.typeName()
+
+		const baseHTML = `<data class="root" value="${base}">${base}</data>`
+		const accHTML =  acc != '' ? `<data class="acc" value="${acc}">${acc}</data>` : ''
+		const typeHTML = type != '' ? `<data class="triad" value="${type}">${type}</data>` : ''
+		const parts = [baseHTML, accHTML, typeHTML].filter(val => val != '')
+
+		return `<span class="piece" aria-label="${this.toAriaLabel()}">${parts.join('\n\t')}</span>`
+	}
+
+	// Static methods
 	static fromSymbol(symbol) {
 		let result
 

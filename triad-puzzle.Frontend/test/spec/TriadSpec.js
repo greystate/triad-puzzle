@@ -124,6 +124,61 @@ describe('Triad', function() {
 		})
 	})
 
+	describe('.toSymbol()', function() {
+		it('converts a C major triad', function() {
+			const triad = new Triad()
+
+			expect(triad.toSymbol()).toEqual('C')
+		})
+
+		it('converts a Db minor triad', function() {
+			const triad = new Triad({
+				pitch: 1,
+				acc: -1,
+				type: 1
+			})
+
+			expect(triad.toSymbol()).toEqual('Dbm')
+		})
+
+		it('converts an F#+ triad', function() {
+
+			const triad = new Triad({
+				pitch: 6,
+				acc: 1,
+				type: 3
+			})
+
+			expect(triad.toSymbol()).toEqual('F#+')
+		})
+
+		it('converts a Bdim triad', function() {
+			const triad = new Triad({
+				pitch: 11,
+				acc: 0,
+				type: 2
+			})
+
+			expect(triad.toSymbol()).toEqual('Bdim')
+		})
+
+	})
+
+	describe('.toHTML()', function() {
+		it('renders a simple C triad', function() {
+			const triad = new Triad()
+			const html = triad.toHTML()
+
+			expect(html).toEqual(`<span class="piece" aria-label="C major"><data class="root" value="C">C</data></span>`)
+		})
+
+		it('renders an F#+ triad', function() {
+			const triad = new Triad('F#+')
+			const html = triad.toHTML()
+
+			expect(html).toEqual(`<span class="piece" aria-label="F sharp augmented"><data class="root" value="F">F</data>\n\t<data class="acc" value="#">#</data>\n\t<data class="triad" value="+">+</data></span>`)
+		})
+	})
 
 	describe('.toAriaLabel()', function() {
 		it('reads out an E triad', function() {
