@@ -7,7 +7,7 @@
       "uuidString" : "5CD93953-8419-48F3-B317-31E1D510E58B"
     }
   ],
-  "creatorBuild" : "34513",
+  "creatorBuild" : "34576",
   "files" : {
     "\/build" : {
       "ft" : 65536,
@@ -70,6 +70,22 @@
       "q" : 90,
       "rq" : 75
     },
+    "\/src\/assets\/fonts\/chriztian-steinmeier-hand-webfont.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/assets\/fonts\/chriztian-steinmeier-hand-webfont.woff",
+      "oF" : 1
+    },
+    "\/src\/assets\/fonts\/dekko-v21-latin-regular.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/assets\/fonts\/dekko-v21-latin-regular.woff2",
+      "oF" : 1
+    },
     "\/src\/components\/_all.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -104,6 +120,58 @@
       "oAP" : "\/build\/components\/index.html",
       "oF" : 0
     },
+    "\/src\/components\/paper\/_paper.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/paper\/_paper.html",
+      "oF" : 0
+    },
+    "\/src\/components\/paper\/paper.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/paper.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
+    "\/src\/components\/piece\/_piece.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/piece\/_piece.html",
+      "oF" : 0
+    },
+    "\/src\/components\/piece\/piece.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/piece.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
     "\/src\/components\/placeholder\/_placeholder.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -123,6 +191,32 @@
       "mS" : 0,
       "oA" : 1,
       "oAP" : "\/build\/assets\/placeholder.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
+    "\/src\/components\/sheet\/_sheet.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/sheet\/_sheet.html",
+      "oF" : 0
+    },
+    "\/src\/components\/sheet\/sheet.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/sheet.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -276,6 +370,17 @@
       "mi" : 0,
       "oA" : 1,
       "oAP" : "\/build\/assets\/point.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/src\/js\/triad-puzzle.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/assets\/triad-puzzle.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
@@ -501,6 +606,42 @@
       "sI" : 0,
       "sU" : 0
     },
+    "\/src\/less\/webfont-chriz-hand.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/webfont-chriz-hand.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
+    "\/src\/less\/webfont-dekko.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/webfont-dekko.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
     "\/src\/media\/.gitkeep" : {
       "cB" : 0,
       "ft" : 8192,
@@ -623,7 +764,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "\/icons\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 716425739.14646304
+    "lastBuiltDate" : 716769782.10598004
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
@@ -1449,9 +1590,6 @@
       "no-new-native-nonconstructor" : {
         "active" : 0
       },
-      "no-new-object" : {
-        "active" : 0
-      },
       "no-new-symbol" : {
         "active" : 1
       },
@@ -1463,6 +1601,9 @@
       },
       "no-obj-calls" : {
         "active" : 1
+      },
+      "no-object-constructor" : {
+        "active" : 0
       },
       "no-octal" : {
         "active" : 1

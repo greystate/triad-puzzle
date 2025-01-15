@@ -1,0 +1,35 @@
+.paper {
+	border: 2em solid;
+	background:
+		linear-gradient(
+			0deg,
+			#000 0, #000 1px, transparent 0, transparent 8px,
+			#000 0, #000 9px, transparent 0, transparent 16px,
+			#000 0, #000 17px, transparent 0, transparent 24px,
+			#000 0, #000 25px, transparent 0, transparent 32px,
+			#000 0, #000 33px, transparent 0),
+			@paper_color;
+
+	background:
+		linear-gradient(
+			0deg,
+			var(--staff-color) 0, var(--staff-color) 1px, transparent 0, transparent 8px,
+			var(--staff-color) 0, var(--staff-color) 9px, transparent 0, transparent 16px,
+			var(--staff-color) 0, var(--staff-color) 17px, transparent 0, transparent 24px,
+			var(--staff-color) 0, var(--staff-color) 25px, transparent 0, transparent 32px,
+			var(--staff-color) 0, var(--staff-color) 33px, transparent 0),
+			var(--paper-color);
+	background-size: 100% 95px;
+	background-position: center -5px;
+	border-color: var(--paper-color);
+
+	max-inline-size: 40em;
+	min-block-size: 20em;
+	margin-inline: auto;
+	padding-block: 2em;
+	padding-inline: 1em;
+
+	header {
+		transform: translate(-1em, -2em);
+	}
+}

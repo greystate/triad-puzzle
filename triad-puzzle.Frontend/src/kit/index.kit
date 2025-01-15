@@ -9,19 +9,84 @@
 </head>
 <body>
 
-<main style="min-height: 80vh; display: flex; flex-direction: column; justify-content: space-around; align-items: center;">
-	<h1><!-- $projectName? --></h1>
+<h1>The Triad Puzzle</h1>
 
-	<img src="/assets/logo.svg" width="100" height="100" />
+<main>
+	<header>
+		<h2>Exercise #2F56</h2>
+	</header>
 
-	<p>
-		This is the index page - find it in <code>src/kit/index.kit</code>,
-		and start building.
-	</p>
-	<p>
-		There's also <a href="/dashboard/">a dashboard page</a> where you can
-		put links to any specific pages for the project.
-	</p>
+	<section class="paper">
+		<ol class="sheet">
+			<li>
+				<span class="piece" style="--rotation: -2">
+					<data class="root" value="C">C</data>
+					<data class="triad" value="C">m</data>
+				</span>
+			</li>
+			<li>
+				<span class="piece" style="--rotation: 0">
+					<data class="root" value="F">F</data>
+					<data class="acc" value="#">&#x266F;</data>
+					<data class="triad" value="+">+</data>
+				</span>
+			</li>
+			<li>
+				<span class="piece" style="--rotation: 2">
+					<data class="root" value="A">A</data>
+					<data class="acc" value="b">&#x266D;</data>
+					<data class="triad" value="m">m</data>
+				</span>
+			</li>
+			<li>
+				<span class="piece" style="--rotation: -1">
+					<data class="root" value="C">C</data>
+					<data class="triad" value="+">+</data>
+				</span>
+			</li>
+			<li>
+				<span class="piece" style="--rotation: -1">
+					<data class="root" value="C">C</data>
+					<data class="triad" value="+">+</data>
+				</span>
+			</li>
+			<li>
+				<span class="piece" style="--rotation: -2">
+					<data class="root" value="C">C</data>
+					<data class="triad" value="C">m</data>
+				</span>
+			</li>
+			<li>
+				<span class="piece" style="--rotation: -2">
+					<data class="root" value="A">A</data>
+					<data class="acc" value="b">&#x266D;</data>
+					<data class="triad" value="m">m</data>
+				</span>
+			</li>
+			<li>
+				<span class="piece" style="--rotation: 1">
+					<data class="root" value="F">F</data>
+					<data class="acc" value="#">&#x266F;</data>
+					<data class="triad" value="+">+</data>
+				</span>
+			</li>
+		</ol>
+
+		<fieldset class="settings">
+			<legend>Settings</legend>
+			<div>
+				<p>
+					<input type="checkbox" id="majorAndMinorOnly" value="yes">
+					<label for="majorAndMinorOnly">Use only major and minor triads</label>
+				</p>
+				<p>
+					<input type="checkbox" id="add9s" value="yes">
+					<label for="add9s">Try add9 as well (both in major &amp; minor)</label>
+				</p>
+			</div>
+		</fieldset>
+
+	</section>
 </main>
 
 </body>

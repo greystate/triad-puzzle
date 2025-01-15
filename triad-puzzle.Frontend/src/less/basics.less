@@ -1,4 +1,36 @@
 // Put your base-styles in here
-body {
-	color: @color_primary;
+
+:root {
+	--piece-color: @piece_color;
+	--text-color: @text_color;
+	--bg-color: @bg_color;
+	--paper-color: @paper_color;
+	--page-color: @page_color;
+	--staff-color: @staff_color;
+
+	@media (prefers-color-scheme: dark) {
+		--piece-color: #343434;
+		--text-color: #80a4b8;
+		--bg-color: @bg_color;
+		--paper-color: #434343;
+		--page-color: #222;
+	}
 }
+
+body {
+	.bodyFont();
+
+	background: @page_color;
+	color: @text_color;
+
+//	&:not(:has(.components)) {
+		color: var(--text-color);
+		background: var(--page-color);
+//	}
+}
+
+h1, h2 {
+	.headerFont();
+}
+
+

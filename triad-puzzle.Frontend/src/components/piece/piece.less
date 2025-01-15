@@ -1,0 +1,65 @@
+.piece {
+	.tileFont();
+
+	font-size: 1.625rem;
+	letter-spacing: -0.1em;
+	background: @piece_color;
+	background: var(--piece-color);
+	border: 2px solid rgba(0, 0, 0, 0.8);
+	width: @piece_size;
+	height: @piece_size;
+	text-align: center;
+	line-height: @piece_size;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+
+	// The `--rotate` variable is set in the `style` attribute
+	--rotate: calc(var(--rotation, 0) * 1deg);
+	transform: rotate(var(--rotate));
+
+	data {
+		line-height: 1;
+	}
+
+	.root {
+		font-size: 2.1em;
+
+		&[value="E"] {
+			margin-inline-end: 0.1em;
+		}
+
+		&[value="A"] {
+			margin-inline-end: -0.1em;
+
+			+ .acc { margin-inline-end: -0.2em; }
+		}
+	}
+
+	.acc {
+		align-self: flex-start;
+		margin-block-start: 1em;
+	}
+
+	.triad {
+		margin-inline-start: 0.2em;
+		font-weight: normal;
+		font-size: 1.28em;
+		margin-block-start: 0.5em;
+
+		&[value="dim"] {
+			font-size: 1em;
+		}
+
+		&[value*="add9"],
+		&[value*="sus"] {
+			font-size: 0.9em;
+		}
+	}
+
+	.acc + .triad {
+		margin-inline-start: -0.2em;
+	}
+}
