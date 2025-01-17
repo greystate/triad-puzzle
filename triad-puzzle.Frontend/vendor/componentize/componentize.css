@@ -1,5 +1,6 @@
 .components {
-  max-width: 75%;
+  container: components-wrapper / inline-size;
+  max-inline-size: 75%;
   margin: 1em auto;
 }
 .components::before {
@@ -9,19 +10,29 @@
   background: rgba(255, 255, 255, 0.8);
   color: #000;
   position: fixed;
-  top: 4px;
-  right: 4px;
+  inset-block-start: 4px;
+  inset-inline-end: 4px;
 }
 .debug .components {
-  max-width: none;
+  max-inline-size: none;
 }
 @media screen and (max-width: 768px) {
   .components {
-    width: auto;
-    max-width: none;
-    padding-left: 0;
-    padding-right: 0;
+    inline-size: auto;
+    max-inline-size: none;
+    padding-inline: 0;
   }
+}
+.components-nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin: 1em auto;
+}
+.components-nav > * {
+  padding: 0.5em 1em;
+  min-width: 10ch;
 }
 .components-filter {
   text-align: center;
@@ -47,17 +58,13 @@
   border-radius: 3px;
   overflow-y: scroll;
   max-height: calc(100vh - 20px);
-  -webkit-transform: translateX(calc(100% - 50px));
-          transform: translateX(calc(100% - 50px));
+  transform: translateX(calc(100% - 50px));
   opacity: 0.05;
-  transition: opacity 0.3s linear, -webkit-transform 0.3s ease-in-out;
   transition: opacity 0.3s linear, transform 0.3s ease-in-out;
-  transition: opacity 0.3s linear, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 .components-toc:hover {
   opacity: 0.9;
-  -webkit-transform: translate(0);
-          transform: translate(0);
+  transform: translate(0);
 }
 .components-toc ul {
   list-style: none;
@@ -87,39 +94,37 @@
   font-family: monospace;
 }
 .component {
+  container-type: inline-size;
   position: relative;
-  margin-top: 3em;
-  margin-bottom: 5em;
+  margin-block-start: 3em;
+  margin-block-end: 5em;
 }
 .component::before {
-  font-size: 12px;
+  font-size: 0.75rem;
   position: absolute;
   font-weight: normal;
   font-family: Inconsolata, Andale Mono, monospace, sans-serif;
   display: block;
   content: attr(data-title);
-  color: #000;
-  right: 100%;
-  margin-right: 20px;
+  inset-inline-end: 100%;
+  margin-inline-end: 20px;
 }
 .component:empty,
 .component > *:empty {
-  min-height: 3em;
+  min-block-size: 3em;
   background: hsla(120, 50%, 55%, 0.5);
 }
 .component .state-toggle {
   position: absolute;
-  top: 0;
-  right: -10px;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  inset-block-start: 0;
+  inset-inline-end: -10px;
+  transform: translateX(100%);
 }
-@media screen and (max-width: 768px) {
+@container components-wrapper (inline-size < 768px) {
   .component::before {
-    position: static;
-    text-align: center;
-    padding: 4px;
-    background: #eee;
+    inset-inline-end: auto;
+    inset-block-end: 100%;
+    padding: 4px 4px 8px;
     display: inline-block;
   }
   .component.solid-bg,
@@ -127,9 +132,8 @@
     border-radius: 0;
   }
   .component .state-toggle {
-    right: 0;
-    -webkit-transform: none;
-            transform: none;
+    inset-inline-end: 0;
+    transform: none;
   }
 }
 .component.solid-bg {
@@ -147,6 +151,12 @@
 }
 .component.alt-bg:hover {
   background-color: #ff90c0;
+}
+.component.limit-half {
+  max-inline-size: max(375px, 50%);
+}
+.component.limit-third {
+  max-inline-size: max(375px, 33%);
 }
 .component[data-modifiers],
 .component[data-states],

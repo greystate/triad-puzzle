@@ -170,13 +170,14 @@
 
 	window.addEventListener('DOMContentLoaded', () => {
 		const componentsWrapper = document.querySelector('.components');
+		const bodyElement = document.querySelector('body');
 
 		if (componentsWrapper) {
 			const filter = componentFilter(componentsWrapper);
 			const components = componentsWrapper.querySelectorAll('.component');
 			const toc = tableOfContents(Array.from(components));
-			componentsWrapper.appendChild(toc);
 			componentsWrapper.insertBefore(filter, componentsWrapper.firstElementChild);
+			bodyElement.appendChild(toc);
 		}
 	});
 
