@@ -117,6 +117,38 @@ describe('Triad', function() {
 			expect(triad.type).toEqual(2)
 		})
 
+		it('builds a minor (add9) Triad from its symbol', function() {
+			const triad = Triad.fromSymbol('Dm(add9)')
+
+			expect(triad.pitch).toEqual(2)
+			expect(triad.acc).toEqual(0)
+			expect(triad.type).toEqual(5)
+		})
+
+		it('builds an add9 Triad from its symbol', function() {
+			const triad = Triad.fromSymbol('Abadd9')
+
+			expect(triad.pitch).toEqual(8)
+			expect(triad.acc).toEqual(-1)
+			expect(triad.type).toEqual(4)
+		})
+
+		it('builds a sus2 Triad from its symbol', function() {
+			const triad = Triad.fromSymbol('Bsus2')
+
+			expect(triad.pitch).toEqual(11)
+			expect(triad.acc).toEqual(0)
+			expect(triad.type).toEqual(6)
+		})
+
+		it('builds a sus4 Triad from its symbol', function() {
+			const triad = Triad.fromSymbol('Fsus4')
+
+			expect(triad.pitch).toEqual(5)
+			expect(triad.acc).toEqual(0)
+			expect(triad.type).toEqual(7)
+		})
+
 		it('Shouldn\'t build a Triad from a wrong symbol', function() {
 			const triad = Triad.fromSymbol('Pdiddy')
 
@@ -162,6 +194,26 @@ describe('Triad', function() {
 			expect(triad.toSymbol()).toEqual('Bdim')
 		})
 
+		it('converts a G#add9 triad', function() {
+			const triad = new Triad({
+				pitch: 8,
+				acc: 1,
+				type: 4
+			})
+
+			expect(triad.toSymbol()).toEqual('G#add9')
+		})
+
+		it('converts an Ebm(add9) triad', function() {
+			const triad = new Triad({
+				pitch: 3,
+				acc: -1,
+				type: 5
+			})
+
+			expect(triad.toSymbol()).toEqual('Ebm(add9)')
+		})
+
 	})
 
 	describe('.toHTML()', function() {
@@ -176,7 +228,14 @@ describe('Triad', function() {
 			const triad = new Triad('F#+')
 			const html = triad.toHTML()
 
-			expect(html).toEqual(`<span class="piece" aria-label="F sharp augmented"><data class="root" value="F">F</data>\n\t<data class="acc" value="#">#</data>\n\t<data class="triad" value="+">+</data></span>`)
+			expect(html).toEqual(`<span class="piece" aria-label="F sharp augmented"><data class="root" value="F">F</data>\n\t<sup><data class="acc" value="#">&#x266F;</data></sup>\n\t<data class="triad" value="+">+</data></span>`)
+		})
+
+		it('renders an Bbm triad', function() {
+			const triad = new Triad('Bbm')
+			const html = triad.toHTML()
+
+			expect(html).toEqual(`<span class="piece" aria-label="B flat minor"><data class="root" value="B">B</data>\n\t<sup><data class="acc" value="b">&#x266D;</data></sup>\n\t<data class="triad" value="m">m</data></span>`)
 		})
 	})
 

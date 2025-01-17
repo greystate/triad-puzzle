@@ -96,18 +96,16 @@ class Triad {
 	}
 
 	accidentalSign(forHTML = false) {
-		if (!forHTML) {
-			switch (this.acc) {
-				case -1:
-					return 'b'
-					break
-				case 1:
-					return '#'
-					break
-				default:
-					return ''
-					break
-			}
+		switch (this.acc) {
+			case -1:
+				return forHTML ? '&#x266D;' : 'b'
+				break
+			case 1:
+				return forHTML ? '&#x266F;' : '#'
+				break
+			default:
+				return ''
+				break
 		}
 	}
 
@@ -156,7 +154,7 @@ class Triad {
 		const type = this.typeName()
 
 		const baseHTML = `<data class="root" value="${base}">${base}</data>`
-		const accHTML =  acc != '' ? `<data class="acc" value="${acc}">${acc}</data>` : ''
+		const accHTML =  acc != '' ? `<sup><data class="acc" value="${acc}">${accEntity}</data></sup>` : ''
 		const typeHTML = type != '' ? `<data class="triad" value="${type}">${type}</data>` : ''
 		const parts = [baseHTML, accHTML, typeHTML].filter(val => val != '')
 
@@ -168,11 +166,11 @@ class Triad {
 		let result
 
 		// ^
-		// ([CDEFGAB])     # root
-		// ([b\#]?)        # optional accidental
-		// (\+|m|dim)?     # optional triad type
+		// ([CDEFGAB])                          # root
+		// ([b\#]?)                             # optional accidental
+		// (\+|m|dim|add9|m\(add9\)|sus[24])?   # optional triad type
 		// $
-		const symbolRE = /^([CDEFGAB])([b\#]?)(\+|m|dim)?$/
+		const symbolRE = /^([CDEFGAB])([b\#]?)(\+|m|dim|add9|m\(add9\)|sus[24])?$/
 		let match, root, accidental, triadtype
 
 		if (symbolRE.test(symbol)) {
