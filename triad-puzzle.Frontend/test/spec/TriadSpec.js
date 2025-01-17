@@ -1,4 +1,4 @@
-import Triad from '../../src/js/triad.js'
+import Triad from '../../src/js/modules/triad.js'
 
 describe('Triad', function() {
 	describe('creation', function() {
