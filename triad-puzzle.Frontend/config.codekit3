@@ -9,6 +9,12 @@
   ],
   "creatorBuild" : "34627",
   "files" : {
+    "\/build" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/build\/build",
+      "oF" : 0
+    },
     "\/icons\/apple-touch-icon.png" : {
       "ft" : 32768,
       "iS" : 7644,
@@ -368,7 +374,7 @@
       "sC" : 0,
       "tS" : 0
     },
-    "\/src\/js\/triad-puzzle.js" : {
+    "\/src\/js\/modules\/triad-puzzle.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
@@ -379,12 +385,12 @@
       "sC" : 0,
       "tS" : 0
     },
-    "\/src\/js\/triad.js" : {
+    "\/src\/js\/modules\/triad.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/build\/assets\/triad.js",
       "oF" : 0,
       "sC" : 0,
@@ -750,7 +756,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "\/icons\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 758654819.35530198
+    "lastBuiltDate" : 758822789.27419305
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
