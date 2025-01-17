@@ -23,6 +23,7 @@ const DEFAULTS = {
 
 const ROOTS = 'C D EF G A B'
 //             012345678901
+//                       11
 
 const ACCIDENTALS = 'b #'
 const TYPES       = ['', 'm', 'dim', '+', 'add9', 'm(add9)', 'sus2', 'sus4']
