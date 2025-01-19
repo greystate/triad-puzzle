@@ -112,6 +112,32 @@
       "sI" : 0,
       "sU" : 0
     },
+    "\/src\/components\/formula\/_formula.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/formula\/_formula.html",
+      "oF" : 0
+    },
+    "\/src\/components\/formula\/formula.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/formula.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
     "\/src\/components\/index.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -197,6 +223,14 @@
       "rwU" : 0,
       "sI" : 0,
       "sU" : 0
+    },
+    "\/src\/components\/sheet\/_root-sheet.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/components\/sheet\/_root-sheet.html",
+      "oF" : 0
     },
     "\/src\/components\/sheet\/_sheet.kit" : {
       "cB" : 0,
@@ -368,7 +402,7 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/build\/assets\/point.js",
       "oF" : 0,
       "sC" : 0,
@@ -379,7 +413,7 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/build\/assets\/triad-puzzle.js",
       "oF" : 0,
       "sC" : 0,
@@ -395,6 +429,14 @@
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
+    },
+    "\/src\/kit\/all.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/all.html",
+      "oF" : 0
     },
     "\/src\/kit\/dashboard\/index.kit" : {
       "cB" : 0,
@@ -606,6 +648,24 @@
       "sI" : 0,
       "sU" : 0
     },
+    "\/src\/less\/themepicker.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/themepicker.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
     "\/src\/less\/webfont-chriz-hand.less" : {
       "aP" : 1,
       "bl" : 1,
@@ -702,6 +762,32 @@
       "sI" : 0,
       "sU" : 0
     },
+    "\/src\/panels\/settings\/_settings.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/panels\/settings\/_settings.html",
+      "oF" : 0
+    },
+    "\/src\/panels\/settings\/settings.less" : {
+      "aP" : 1,
+      "bl" : 1,
+      "co" : 0,
+      "eJ" : 0,
+      "ft" : 1,
+      "iI" : 0,
+      "ma" : 0,
+      "mS" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/settings.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "rwU" : 0,
+      "sI" : 0,
+      "sU" : 0
+    },
     "\/test" : {
       "ft" : 65536,
       "oA" : 1,
@@ -742,6 +828,28 @@
       "oAP" : "\/build\/assets\/reset.css",
       "oF" : 0,
       "pg" : 0
+    },
+    "\/vendor\/theme-picker\/theme-picker.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/theme-picker.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/vendor\/wakelock-toggle\/wakelock-toggle.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/assets\/wakelock-toggle.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
     }
   },
   "hooks" : [
