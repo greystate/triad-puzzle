@@ -1,0 +1,7 @@
+{
+	"name": "Triad Puzzle",
+	"icons": [
+		{ "src": "/ttp-icon-192.png", "type": "image/png", "sizes": "192x192" },
+		{ "src": "/ttp-icon-512.png", "type": "image/png", "sizes": "512x512" }
+	]
+}
