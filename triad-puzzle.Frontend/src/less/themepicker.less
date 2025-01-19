@@ -1,0 +1,23 @@
+.themepicker {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 8px;
+	white-space: nowrap;
+	margin-block: 1em;
+	color: inherit;
+
+	theme-picker {
+		transition: 300ms ease-in-out;
+		padding-block: 2px;
+		cursor: pointer;
+
+		&::before { display: inline-block; }
+
+		&[current="light"]::before { content: '🌻' ' ' attr(current); }
+		&[current="dark"]::before { content: '🌙' ' ' attr(current); }
+		&[current="auto"]::before { content: '💻' ' ' attr(current); }
+
+		&:hover, &:focus { color: #000; }
+	}
+}

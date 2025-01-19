@@ -1,0 +1,14 @@
+.sheet {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-items: center;
+	gap: 40px 20px;
+	padding: 0;
+	margin: 0;
+
+	@container paper (inline-size < 440px) {
+		gap: 20px 10px;
+		grid-template-columns: repeat(2, 1fr)
+	}
+}

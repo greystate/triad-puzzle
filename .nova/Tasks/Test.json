@@ -1,0 +1,12 @@
+{
+  "actions" : {
+    "run" : {
+      "enabled" : true,
+      "script" : "open \"http:\/\/greystate-airmac.local:5757\/test\/SpecRunner.html\""
+    }
+  },
+  "environment" : {
+    "CK_FOLDER" : "${Config:com.CodeKitApp.Nova.codekitFolder}",
+    "TM_PROJECT_DIRECTORY" : "${WorkspaceFolder}"
+  }
+}
