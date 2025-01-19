@@ -28,6 +28,7 @@ const ROOTS = 'C D EF G A B'
 const ACCIDENTALS = 'b #'
 const TYPES       = ['', 'm', 'dim', '+', 'add9', 'm(add9)', 'sus2', 'sus4']
 const ARIA_TYPES  = ['major', 'minor', 'diminished', 'augmented', 'add nine', 'minor add nine', 'sus two', 'sus four']
+const FORMULAE    = ['1 3 5', '1 b3 5', '1 b3 b5', '1 3 #5', '2 3 5', '2 b3 5', '1 2 5', '1 4 5']
 
 class Triad {
 	constructor(options = { }) {
@@ -38,6 +39,7 @@ class Triad {
 			if (this.pitch == null) { this.pitch = DEFAULTS.pitch }
 			if (this.acc == null) { this.acc = DEFAULTS.acc }
 			if (this.type == null) { this.type = DEFAULTS.type }
+			this.formula = FORMULAE[this.type]
 		}
 
 		this.validate()
@@ -98,10 +100,10 @@ class Triad {
 	accidentalSign(forHTML = false) {
 		switch (this.acc) {
 			case -1:
-				return forHTML ? '&#x266D;' : 'b'
+				return forHTML ? Triad.entityForAccidental('b') : 'b'
 				break
 			case 1:
-				return forHTML ? '&#x266F;' : '#'
+				return forHTML ? Triad.entityForAccidental('#') : '#'
 				break
 			default:
 				return ''
@@ -161,6 +163,27 @@ class Triad {
 		return `<span class="piece" aria-label="${this.toAriaLabel()}">${parts.join('\n\t')}</span>`
 	}
 
+	toFormulaHTML() {
+		const formula = this.formula.split(' ')
+		const rootHTML = `<data class="step">${formula[0]}</data>`
+
+		const modifier3 = formula[1].length == 1 ? '' : formula[1].charAt(0)
+		const modifier5 = formula[2].length == 1 ? '' : formula[2].charAt(0)
+		const step3AtIndex = modifier3 == '' ? 0 : 1
+		const step5AtIndex = modifier5 == '' ? 0 : 1
+
+		const entity3 = modifier3 != '' ? Triad.entityForAccidental(modifier3) : ''
+		const entity5 = modifier5 != '' ? Triad.entityForAccidental(modifier5) : ''
+
+		const mod3HTML = modifier3 != '' ? `<data class="acc" value="${modifier3}">${entity3}</data>` : ''
+		const mod5HTML = modifier5 != '' ? `<data class="acc" value="${modifier5}">${entity5}</data>` : ''
+
+		const thirdHTML = `<data class="step">${mod3HTML}${formula[1].charAt(step3AtIndex)}</data>`
+		const fifthHTML = `<data class="step">${mod5HTML}${formula[2].charAt(step5AtIndex)}</data>`
+
+		return `<article class="formula">\n\t${rootHTML}\n\t${thirdHTML}\n\t${fifthHTML}\n</article>`
+	}
+
 	// Static methods
 	static fromSymbol(symbol) {
 		let result
@@ -179,6 +202,23 @@ class Triad {
 			const pitch = ROOTS.indexOf(root) + acc
 			const type = triadtype !== undefined ? TYPES.indexOf(triadtype) : 0
 			result = new Triad({ pitch, acc, type })
+		}
+
+		return result
+	}
+
+	static entityForAccidental(accidental) {
+		let result
+
+		switch (accidental) {
+			case 'b':
+				result = '&#x266D;'
+				break
+			case '#':
+				result = '&#x266F;'
+				break
+			default:
+				result = ''
 		}
 
 		return result

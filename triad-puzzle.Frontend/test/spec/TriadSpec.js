@@ -18,18 +18,21 @@ describe('Triad', function() {
 			expect(this.triad.pitch).toEqual(0)
 			expect(this.triad.acc).toEqual(0)
 			expect(this.triad.type).toEqual(0)
+			expect(this.triad.formula).toEqual('1 3 5')
 		})
 
 		it('can create a D#m triad', function() {
 			expect(this.otherTriad.pitch).toEqual(3)
 			expect(this.otherTriad.acc).toEqual(1)
 			expect(this.otherTriad.type).toEqual(1)
+			expect(this.otherTriad.formula).toEqual('1 b3 5')
 		})
 
 		it('can be created from a symbol', function() {
 			expect(this.notherTriad.pitch).toEqual(8)
 			expect(this.notherTriad.acc).toEqual(-1)
 			expect(this.notherTriad.type).toEqual( 2)
+			expect(this.notherTriad.formula).toEqual('1 b3 b5')
 		})
 	})
 
@@ -156,6 +159,16 @@ describe('Triad', function() {
 		})
 	})
 
+	describe('.entityForAccidental()', function() {
+		it('returns the correct flat for "b"', function() {
+			expect(Triad.entityForAccidental('b')).toEqual('&#x266D;')
+		})
+
+		it('returns the correct sharp for "#"', function() {
+			expect(Triad.entityForAccidental('#')).toEqual('&#x266F;')
+		})
+	})
+
 	describe('.toSymbol()', function() {
 		it('converts a C major triad', function() {
 			const triad = new Triad()
@@ -236,6 +249,24 @@ describe('Triad', function() {
 			const html = triad.toHTML()
 
 			expect(html).toEqual(`<span class="piece" aria-label="B flat minor"><data class="root" value="B">B</data>\n\t<sup><data class="acc" value="b">&#x266D;</data></sup>\n\t<data class="triad" value="m">m</data></span>`)
+		})
+	})
+
+	describe('.toFormulaHTML()', function() {
+		it('returns the formula for a major triad, regardless of pitch', function() {
+			const triad1 = new Triad('F')
+			const triad2 = new Triad('Gb')
+
+			expect(triad1.toFormulaHTML()).toEqual('<article class="formula">\n\t<data class="step">1</data>\n\t<data class="step">3</data>\n\t<data class="step">5</data>\n</article>')
+			expect(triad1.toFormulaHTML()).toEqual(triad2.toFormulaHTML())
+		})
+
+		it('returns the formula for a minor triad, regardless of pitch', function() {
+			const triad1 = new Triad('Cm')
+			const triad2 = new Triad('Abm')
+
+			expect(triad1.toFormulaHTML()).toEqual('<article class="formula">\n\t<data class="step">1</data>\n\t<data class="step"><data class="acc" value="b">&#x266D;</data>3</data>\n\t<data class="step">5</data>\n</article>')
+			expect(triad1.toFormulaHTML()).toEqual(triad2.toFormulaHTML())
 		})
 	})
 

@@ -1,8 +1,74 @@
 import Triad from './triad.js'
 
-class TriadPuzzle {
-	constructor() {
+const SPACE_KEY = 32
+const PIECES = 8
+const DEFAULTS = {
+	sheetSelector: '.sheet',
+	majorAndMinorOnly: false,
+	add9s: false,
+	suss: false
+}
 
+class TriadPuzzle {
+	constructor(options = {}) {
+		this.sheetSelector = options.sheetSelector ?? DEFAULTS.sheetSelector
+		this.majorAndMinorOnly = options.majorAndMinorOnly ?? DEFAULTS.majorAndMinorOnly
+		this.add9s = options.add9s ?? DEFAULTS.add9s
+
+		this.suss = options.suss ?? DEFAULTS.suss // Not implemented yet
+
+		this.setupSheet()
+
+		document.body.addEventListener('keypress', (event) => {
+			if (event.keyCode === SPACE_KEY) {
+				event.preventDefault()
+				this.setupSheet()
+			}
+		})
+
+		document.body.addEventListener('touchend', (event) => {
+			const target = event.target
+			if (target.closest('.piece'))
+				this.setupSheet()
+		})
+	}
+
+	setupSheet(keepExisting = false) {
+		const sheet = document.querySelector(this.sheetSelector)
+		const hanger = document.createDocumentFragment()
+
+		let previousTriad = null
+		let item, triad, count = 1
+
+		// We need 8 pieces, but we don't want to have
+		// two identical triads follow each other
+		while (count <= PIECES) {
+			item = document.createElement('li')
+			triad = this.getRandomTriad()
+			if (triad.toSymbol() !== previousTriad) {
+				const rotation = randomInt(-2, 3)
+				item.innerHTML = triad.toHTML()
+				item.style.setProperty('--rotation', rotation)
+				hanger.appendChild(item)
+				previousTriad = triad.toSymbol()
+				count++
+			}
+		}
+
+		// Fallback for browsers that don't support View Transitions:
+		if (!document.startViewTransition) {
+			if (keepExisting === false) { sheet.innerHTML = '' }
+
+			sheet.appendChild(hanger)
+			return
+		}
+
+		// With View Transitions:
+		const transition = document.startViewTransition(() => {
+			if (keepExisting === false) { sheet.innerHTML = '' }
+
+			sheet.appendChild(hanger)
+		})
 	}
 
 	getRandomTriad() {
@@ -39,7 +105,6 @@ function randomInt(min, max) {
 	return Math.floor(Math.random() * (high - low + 1)) + low
 
 }
-
 
 function clampForClarity(p, a) {
 	let acc = a

@@ -18,6 +18,4 @@ describe('TriadPuzzle', function() {
 			expect(this.randomTriad.type).toBeLessThanOrEqual(7)
 		})
 	})
-
-	it('')
 })
