@@ -1,4 +1,9 @@
 .paper {
+	container: paper / inline-size;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
 	border: 2em solid;
 	background:
 		linear-gradient(
@@ -31,5 +36,13 @@
 
 	header {
 		transform: translate(-1em, -2em);
+	}
+
+	hr {
+		inline-size: 50%;
+		block-size: 1px;
+		border: none;
+		background: @text_color;
+
 	}
 }
