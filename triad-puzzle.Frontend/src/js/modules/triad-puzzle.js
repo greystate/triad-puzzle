@@ -45,12 +45,12 @@ class TriadPuzzle {
 		while (count <= PIECES) {
 			item = document.createElement('li')
 			triad = this.getRandomTriad()
-			if (triad.toSymbol() !== previousTriad) {
+			if (triad.equals(previousTriad) === false) {
 				const rotation = randomInt(-2, 3)
 				item.innerHTML = triad.toHTML()
 				item.style.setProperty('--rotation', rotation)
 				hanger.appendChild(item)
-				previousTriad = triad.toSymbol()
+				previousTriad = triad
 				count++
 			}
 		}
