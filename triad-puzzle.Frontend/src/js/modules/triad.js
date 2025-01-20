@@ -123,6 +123,14 @@ class Triad {
 		return `${this.baseName()}${this.accidentalSign()}`
 	}
 
+	equals(otherTriad) {
+		if (otherTriad !== null) {
+			return this.pitch === otherTriad.pitch && this.type === otherTriad.type
+		} else {
+			return false
+		}
+	}
+
 	toSymbol() {
 		return `${this.rootName()}${this.typeName()}`
 	}

@@ -92,6 +92,22 @@ describe('Triad', function() {
 		})
 	})
 
+	describe('comparison', function() {
+		it('recognizes enharmonic triads', function() {
+			const triad1 = new Triad('Cm')
+			const triad2 = new Triad('B#m')
+
+			expect(triad1.equals(triad2)).toBeTruthy()
+		})
+
+		it('distinguishes between types', function() {
+			const triad1 = new Triad('D+')
+			const triad2 = new Triad('Ddim')
+
+			expect(triad1.equals(triad2)).toBeFalsy()
+		})
+	})
+
 
 	describe('.fromSymbol()', function() {
 		it('builds a minor Triad from its symbol', function() {
