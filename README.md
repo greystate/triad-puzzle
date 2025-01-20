@@ -6,11 +6,11 @@ Mick Goodrick, and a technique I've been using to navigate the fretboard in both
 chord- and solo-context.
 
 This is the development repository - codewise, I use [Less][LESS] and
-[CoffeeScript][COFFEE]. I have [CodeKit][CK] doing the compiles and build into a
-`build/` directory which is then published to the `gh-pages` branch - that branch is
+JavaScript. I have [CodeKit][CK] doing the compiles and build into a
+`build/` directory which is then deployed to the `/docs` directory which in turn is
 served with [GitHub Pages][GH] at https://triad-puzzle.com
 
-Currently, you get a sheet with 8 random triads and when you've played through them,
+Currently, you get a sheet with 8 random triads, and when you've played through them,
 hit the <kbd>SPACE</kbd> key (or tap any of the pieces if you're on a touch-enabled
 device) to get a new sheet.
 
@@ -72,6 +72,5 @@ smoothest possible way.
 
 [TAG]: https://www.amazon.com/Advancing-Guitarist-Mick-Goodrick/dp/0881885894
 [LESS]: http://lesscss.org
-[COFFEE]: http://coffeescript.org
 [CK]: https://codekitapp.com
 [GH]: https://pages.github.com
