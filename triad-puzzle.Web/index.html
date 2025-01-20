@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Index — The Triad Puzzle</title>
+<link rel="stylesheet" href="/assets/app.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script type="module" src="/assets/app.module.js"></script>
+<script nomodule defer src="/assets/app.nomodule.js"></script>
+
+</head>
+<body>
+
+<h1>The Triad Puzzle</h1>
+
+<main>
+	<!-- <header>
+		<h2>Exercise #2F56</h2>
+	</header> -->
+
+	<section class="paper">
+		<ol class="sheet">
+			<article class="piece" style="--rotation: 3">
+																			<data class="root" value="C">C</data>
+																			<sup><data class="acc" value=""></data></sup>
+																			<data class="triad" value=""></data>
+																		</article>
+																		
+		</ol>
+
+		<hr />
+
+		<fieldset class="settings">
+			<legend>Settings</legend>
+			<div>
+				<p>
+					<input type="checkbox" switch id="majorAndMinorOnly" value="true">
+					<label for="majorAndMinorOnly">Use only major and minor triads</label>
+				</p>
+				<p>
+					<input type="checkbox" switch id="add9s" value="true">
+					<label for="add9s">Try add9 as well (both in major &amp; minor)</label>
+				</p>
+		
+				<wakelock-toggle></wakelock-toggle>
+		
+				<p class="themepicker">
+					<theme-picker></theme-picker>
+				</p>
+			</div>
+		</fieldset>
+		
+
+	</section>
+
+</main>
+
+</body>
+</html>

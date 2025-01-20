@@ -1,0 +1,362 @@
+@font-face {
+  font-family: 'Chriz Hand';
+  src: url('fonts/chriztian-steinmeier-hand-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Dekko';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/dekko-v21-latin-regular.woff2') format('woff2');
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+img {
+  height: auto;
+}
+a[class] {
+  color: inherit;
+}
+:root {
+  --piece-color: #f5f4f0;
+  --text-color: #36505e;
+  --bg-color: #f0a846;
+  --paper-color: #f6f6f6;
+  --page-color: #fefefe;
+  --staff-color: #000;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --piece-color: #4c4c4c;
+    --text-color: #80a4b8;
+    --bg-color: #f0a846;
+    --paper-color: #434343;
+    --page-color: #222;
+  }
+}
+:root[data-theme="light"] {
+  --piece-color: #f5f4f0;
+  --text-color: #36505e;
+  --bg-color: #f0a846;
+  --paper-color: #f6f6f6;
+  --page-color: #fefefe;
+  --staff-color: #000;
+}
+:root[data-theme="dark"] {
+  --piece-color: #4c4c4c;
+  --text-color: #80a4b8;
+  --bg-color: #f0a846;
+  --paper-color: #434343;
+  --page-color: #222;
+}
+body {
+  font-family: Helvetica, sans-serif;
+  background: #fefefe;
+  color: #36505e;
+  color: var(--text-color);
+  background: var(--page-color);
+}
+.components-nav a {
+  color: inherit;
+}
+h1,
+h2 {
+  font-family: "Chriz Hand", Helvetica, sans-serif;
+  text-align: center;
+  margin-block: 0.7em;
+}
+.themepicker {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  margin-block: 1em;
+  color: inherit;
+}
+.themepicker theme-picker {
+  transition: 300ms ease-in-out;
+  padding-block: 2px;
+  cursor: pointer;
+}
+.themepicker theme-picker::before {
+  display: inline-block;
+}
+.themepicker theme-picker[current="light"]::before {
+  content: '🌻' ' ' attr(current);
+}
+.themepicker theme-picker[current="dark"]::before {
+  content: '🌙' ' ' attr(current);
+}
+.themepicker theme-picker[current="auto"]::before {
+  content: '💻' ' ' attr(current);
+}
+.themepicker theme-picker:hover,
+.themepicker theme-picker:focus {
+  color: #000;
+}
+.placeholder {
+  box-sizing: border-box;
+  background: var(--bg-color, rgba(0, 100, 200, 0.3));
+  min-height: 5em;
+  border: 2px dashed rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+}
+.placeholder h3 {
+  margin: auto;
+  font-size: 1em;
+  font-weight: normal;
+}
+.placeholder h3::before {
+  content: "[ ";
+}
+.placeholder h3::after {
+  content: " ]";
+}
+.text > * + * {
+  margin-block-start: 1rem;
+}
+.text.contain p,
+.text.contain ul,
+.text.contain ol,
+.text.contain h2,
+.text.contain h3,
+.text.contain h4 {
+  max-inline-size: 75ch;
+}
+.text.start {
+  text-align: start;
+}
+.text.center {
+  text-align: center;
+}
+.text.end {
+  text-align: end;
+}
+.text blockquote {
+  padding-inline-start: 3rem;
+  border-inline-start: 0.5em solid;
+  font-style: italic;
+}
+.piece {
+  font-family: Dekko, Helvetica, sans-serif;
+  font-size: 1.625rem;
+  font-weight: normal;
+  letter-spacing: -0.05em;
+  background: #f5f4f0;
+  background: var(--piece-color);
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  --rotate: calc(var(--rotation, 0) * 1deg);
+  transform: rotate(var(--rotate));
+}
+.piece data {
+  line-height: 1;
+}
+.piece sup {
+  display: contents;
+}
+.piece .root {
+  font-size: 2.1em;
+}
+.piece .root[value="A"] {
+  margin-inline-end: -0.1em;
+}
+.piece .root[value="A"] + .acc {
+  margin-inline-end: -0.2em;
+}
+.piece .acc {
+  align-self: flex-start;
+  margin-block-start: 1em;
+}
+.piece .acc[value="b"] {
+  margin-inline: -4px;
+}
+.piece .acc[value="#"] {
+  margin-inline: -2px;
+}
+.piece .triad {
+  font-size: 1.28em;
+  margin-block-start: 0.5em;
+}
+.piece .triad[value="dim"] {
+  font-size: 1em;
+}
+.piece .triad[value*="add9"],
+.piece .triad[value*="sus"] {
+  font-size: 0.9em;
+}
+.piece .triad[value="+"] {
+  margin-block-start: 0;
+  font-size: 1.8em;
+}
+.piece .root + .triad {
+  margin-inline-start: 0.1em;
+}
+.piece sup + .triad {
+  margin-inline-start: -0.2em;
+}
+.paper {
+  container: paper / inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 2em solid;
+  background: linear-gradient(0deg, #000 0, #000 1px, transparent 0, transparent 8px, #000 0, #000 9px, transparent 0, transparent 16px, #000 0, #000 17px, transparent 0, transparent 24px, #000 0, #000 25px, transparent 0, transparent 32px, #000 0, #000 33px, transparent 0), #f6f6f6;
+  background: linear-gradient(0deg, var(--staff-color) 0, var(--staff-color) 1px, transparent 0, transparent 8px, var(--staff-color) 0, var(--staff-color) 9px, transparent 0, transparent 16px, var(--staff-color) 0, var(--staff-color) 17px, transparent 0, transparent 24px, var(--staff-color) 0, var(--staff-color) 25px, transparent 0, transparent 32px, var(--staff-color) 0, var(--staff-color) 33px, transparent 0), var(--paper-color);
+  background-size: 100% 95px;
+  background-position: center -5px;
+  border-color: var(--paper-color);
+  max-inline-size: 40em;
+  min-block-size: 20em;
+  margin-inline: auto;
+  padding-block: 2em;
+  padding-inline: 1em;
+}
+.paper header {
+  transform: translate(-1em, -2em);
+}
+.paper hr {
+  inline-size: 50%;
+  block-size: 1px;
+  border: none;
+  background: #36505e;
+}
+.sheet {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 40px 20px;
+  padding: 0;
+  margin: 0;
+}
+@container paper (inline-size < 440px) {
+  .sheet {
+    gap: 20px 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.formula {
+  font-family: Dekko, Helvetica, sans-serif;
+  font-size: 1.625rem;
+}
+.formula .acc {
+  font-size: 0.7em;
+}
+.sample-panel {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.settings {
+  display: inline-block;
+  padding: 10px;
+  border: none;
+  background: #ccc8;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  border: 2px solid;
+  border-radius: 2px;
+  color: #000;
+}
+.settings legend {
+  margin: 0;
+  display: none;
+}
+.settings > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.settings > div > * {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+[data-layout] {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 74em;
+}

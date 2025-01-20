@@ -108,7 +108,6 @@ describe('Triad', function() {
 		})
 	})
 
-
 	describe('.fromSymbol()', function() {
 		it('builds a minor Triad from its symbol', function() {
 			const triad = Triad.fromSymbol('C#m')
