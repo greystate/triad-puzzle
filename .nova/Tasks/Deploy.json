@@ -1,0 +1,11 @@
+{
+  "actions" : {
+    "run" : {
+      "enabled" : true,
+      "path" : "DEPLOY.sh"
+    }
+  },
+  "environment" : {
+    "TM_PROJECT_DIRECTORY" : "${WorkspaceFolder}"
+  }
+}
