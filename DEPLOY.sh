@@ -1,6 +1,6 @@
 PROJECT_DIR=$TM_PROJECT_DIRECTORY
 BUILD_DIR=$PROJECT_DIR/triad-puzzle.Frontend/build
-WEB_DIR=$PROJECT_DIR/triad-puzzle.Web
+WEB_DIR=$PROJECT_DIR/docs
 
 cp $BUILD_DIR/assets/*.* $WEB_DIR/assets
 cp $BUILD_DIR/assets/fonts/*.* $WEB_DIR/assets/fonts
