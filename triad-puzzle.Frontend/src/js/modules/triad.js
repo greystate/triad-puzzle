@@ -199,7 +199,9 @@ class Triad {
 		if (symbolRE.test(symbol)) {
 			[match, root, accidental, triadtype] = symbol.match(symbolRE)
 			const acc = accidental !== '' ? ACCIDENTALS.indexOf(accidental) - 1 : 0
-			const pitch = ROOTS.indexOf(root) + acc
+			let pitch = ROOTS.indexOf(root) + acc
+			if (pitch > 11) { pitch = 0 }
+			if (pitch < 0 ) { pitch = 11 }
 			const type = triadtype !== undefined ? TYPES.indexOf(triadtype) : 0
 			result = new Triad({ pitch, acc, type })
 		}

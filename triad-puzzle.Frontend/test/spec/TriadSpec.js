@@ -81,8 +81,14 @@ describe('Triad', function() {
 				acc: 1
 			})
 
+			const overRun = Triad.fromSymbol('B#m')
+			const underRun = Triad.fromSymbol('Cb+')
+
 			expect(triadOver.baseName()).toEqual('C')
 			expect(triadUnder.baseName()).toEqual('B')
+
+			expect(overRun.pitch).toEqual(0)
+			expect(underRun.pitch).toEqual(11)
 		})
 	})
 
