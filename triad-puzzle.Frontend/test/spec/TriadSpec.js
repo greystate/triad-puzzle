@@ -265,7 +265,7 @@ describe('Triad', function() {
 			expect(html).toEqual(`<span class="piece" aria-label="F sharp augmented"><data class="root" value="F">F</data>\n\t<sup><data class="acc" value="#">&#x266F;</data></sup>\n\t<data class="triad" value="+">+</data></span>`)
 		})
 
-		it('renders an Bbm triad', function() {
+		it('renders a Bbm triad', function() {
 			const triad = new Triad('Bbm')
 			const html = triad.toHTML()
 
