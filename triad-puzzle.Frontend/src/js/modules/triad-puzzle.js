@@ -47,8 +47,10 @@ class TriadPuzzle {
 			triad = this.getRandomTriad()
 			if (triad.equals(previousTriad) === false) {
 				const rotation = randomInt(-2, 3)
+				// const border = randomInt(1, 6)
 				item.innerHTML = triad.toHTML()
 				item.style.setProperty('--rotation', rotation)
+				// item.style.setProperty('--border', `var(--radius-drawn-${border})`)
 				hanger.appendChild(item)
 				previousTriad = triad
 				count++
