@@ -116,7 +116,7 @@
 	    }
 	  }
 	  rootName() {
-	    return `${this.baseName()}${this.accidentalSign()}`;
+	    return "".concat(this.baseName()).concat(this.accidentalSign());
 	  }
 	  equals(otherTriad) {
 	    if (otherTriad !== null) {
@@ -126,7 +126,7 @@
 	    }
 	  }
 	  toSymbol() {
-	    return `${this.rootName()}${this.typeName()}`;
+	    return "".concat(this.rootName()).concat(this.typeName());
 	  }
 	  toAriaLabel() {
 	    const base = this.baseName();
@@ -144,7 +144,7 @@
 	    }
 	    this.accidentalSign(true);
 	    const type = this.typeName(true);
-	    let label = `${base} ${acc} ${type}`;
+	    let label = "".concat(base, " ").concat(acc, " ").concat(type);
 	    return label.replace(/\s+/, ' ');
 	  }
 	  toHTML() {
@@ -152,26 +152,26 @@
 	    const acc = this.accidentalSign();
 	    const accEntity = this.accidentalSign(true);
 	    const type = this.typeName();
-	    const baseHTML = `<data class="root" value="${base}">${base}</data>`;
-	    const accHTML = acc != '' ? `<sup><data class="acc" value="${acc}">${accEntity}</data></sup>` : '';
-	    const typeHTML = type != '' ? `<data class="triad" value="${type}">${type}</data>` : '';
+	    const baseHTML = "<data class=\"root\" value=\"".concat(base, "\">").concat(base, "</data>");
+	    const accHTML = acc != '' ? "<sup><data class=\"acc\" value=\"".concat(acc, "\">").concat(accEntity, "</data></sup>") : '';
+	    const typeHTML = type != '' ? "<data class=\"triad\" value=\"".concat(type, "\">").concat(type, "</data>") : '';
 	    const parts = [baseHTML, accHTML, typeHTML].filter(val => val != '');
-	    return `<span class="piece" aria-label="${this.toAriaLabel()}">${parts.join('\n\t')}</span>`;
+	    return "<span class=\"piece\" aria-label=\"".concat(this.toAriaLabel(), "\">").concat(parts.join('\n\t'), "</span>");
 	  }
 	  toFormulaHTML() {
 	    const formula = this.formula.split(' ');
-	    const rootHTML = `<data class="step">${formula[0]}</data>`;
+	    const rootHTML = "<data class=\"step\">".concat(formula[0], "</data>");
 	    const modifier3 = formula[1].length == 1 ? '' : formula[1].charAt(0);
 	    const modifier5 = formula[2].length == 1 ? '' : formula[2].charAt(0);
 	    const step3AtIndex = modifier3 == '' ? 0 : 1;
 	    const step5AtIndex = modifier5 == '' ? 0 : 1;
 	    const entity3 = modifier3 != '' ? Triad.entityForAccidental(modifier3) : '';
 	    const entity5 = modifier5 != '' ? Triad.entityForAccidental(modifier5) : '';
-	    const mod3HTML = modifier3 != '' ? `<data class="acc" value="${modifier3}">${entity3}</data>` : '';
-	    const mod5HTML = modifier5 != '' ? `<data class="acc" value="${modifier5}">${entity5}</data>` : '';
-	    const thirdHTML = `<data class="step">${mod3HTML}${formula[1].charAt(step3AtIndex)}</data>`;
-	    const fifthHTML = `<data class="step">${mod5HTML}${formula[2].charAt(step5AtIndex)}</data>`;
-	    return `<article class="formula">\n\t${rootHTML}\n\t${thirdHTML}\n\t${fifthHTML}\n</article>`;
+	    const mod3HTML = modifier3 != '' ? "<data class=\"acc\" value=\"".concat(modifier3, "\">").concat(entity3, "</data>") : '';
+	    const mod5HTML = modifier5 != '' ? "<data class=\"acc\" value=\"".concat(modifier5, "\">").concat(entity5, "</data>") : '';
+	    const thirdHTML = "<data class=\"step\">".concat(mod3HTML).concat(formula[1].charAt(step3AtIndex), "</data>");
+	    const fifthHTML = "<data class=\"step\">".concat(mod5HTML).concat(formula[2].charAt(step5AtIndex), "</data>");
+	    return "<article class=\"formula\">\n\t".concat(rootHTML, "\n\t").concat(thirdHTML, "\n\t").concat(fifthHTML, "\n</article>");
 	  }
 
 	  // Static methods
@@ -230,11 +230,12 @@
 	};
 	class TriadPuzzle {
 	  constructor() {
+	    var _options$sheetSelecto, _options$majorAndMino, _options$add9s, _options$suss;
 	    let options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-	    this.sheetSelector = options.sheetSelector ?? DEFAULTS.sheetSelector;
-	    this.majorAndMinorOnly = options.majorAndMinorOnly ?? DEFAULTS.majorAndMinorOnly;
-	    this.add9s = options.add9s ?? DEFAULTS.add9s;
-	    this.suss = options.suss ?? DEFAULTS.suss; // Not implemented yet
+	    this.sheetSelector = (_options$sheetSelecto = options.sheetSelector) !== null && _options$sheetSelecto !== void 0 ? _options$sheetSelecto : DEFAULTS.sheetSelector;
+	    this.majorAndMinorOnly = (_options$majorAndMino = options.majorAndMinorOnly) !== null && _options$majorAndMino !== void 0 ? _options$majorAndMino : DEFAULTS.majorAndMinorOnly;
+	    this.add9s = (_options$add9s = options.add9s) !== null && _options$add9s !== void 0 ? _options$add9s : DEFAULTS.add9s;
+	    this.suss = (_options$suss = options.suss) !== null && _options$suss !== void 0 ? _options$suss : DEFAULTS.suss; // Not implemented yet
 
 	    this.setupSheet();
 	    document.body.addEventListener('keypress', event => {
@@ -264,8 +265,10 @@
 	      triad = this.getRandomTriad();
 	      if (triad.equals(previousTriad) === false) {
 	        const rotation = randomInt(-2, 3);
+	        // const border = randomInt(1, 6)
 	        item.innerHTML = triad.toHTML();
 	        item.style.setProperty('--rotation', rotation);
+	        // item.style.setProperty('--border', `var(--radius-drawn-${border})`)
 	        hanger.appendChild(item);
 	        previousTriad = triad;
 	        count++;
@@ -355,7 +358,7 @@
 	    } else if (this.themes.indexOf(current) >= 0) {
 	      document.documentElement.dataset.theme = this.currentTheme;
 	    } else {
-	      console.error(`Couldn't set theme to '${current}' - possible values are: ${this.themes}`);
+	      console.error("Couldn't set theme to '".concat(current, "' - possible values are: ").concat(this.themes));
 	    }
 	    this.setAttribute('current', current);
 	    this.saveTheme();
@@ -420,13 +423,7 @@
 	    switcher.setAttribute('switch', '');
 	    switcher.addEventListener('change', this);
 	    const styleElement = document.createElement('style');
-	    styleElement.textContent = `
-			wakelock-toggle {
-				display: flex;
-				justify-content: flex-start;
-				gap: 10px;
-			}
-		`;
+	    styleElement.textContent = "\n\t\t\twakelock-toggle {\n\t\t\t\tdisplay: flex;\n\t\t\t\tjustify-content: flex-start;\n\t\t\t\tgap: 10px;\n\t\t\t}\n\t\t";
 	    this.appendChild(styleElement);
 	    this.appendChild(switcher);
 	    this.appendChild(labelElement);
@@ -453,8 +450,8 @@
 	        this.switcherElement.checked = false;
 	      });
 	    } catch (err) {
-	      console.info(`Couldn't activate WakeLock.`);
-	      console.log(`${err.name}, ${err.message}`);
+	      console.info("Couldn't activate WakeLock.");
+	      console.log("".concat(err.name, ", ").concat(err.message));
 	      this.switcherElement.checked = false;
 	      this.switcherElement.disabled = true;
 	    }
