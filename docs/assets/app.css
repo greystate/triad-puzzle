@@ -370,6 +370,9 @@ h2 {
   align-items: center;
   gap: 10px;
 }
+.settings > div > * input {
+  flex: none;
+}
 [data-layout] {
   margin-right: auto;
   margin-left: auto;
